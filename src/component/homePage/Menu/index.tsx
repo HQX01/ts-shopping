@@ -18,7 +18,7 @@ import Container from "@material-ui/core/Container";
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            width: '30%',
+            width: '50%',
             backgroundColor: theme.palette.background.paper,
         },
         nested: {
