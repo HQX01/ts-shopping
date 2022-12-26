@@ -4,6 +4,7 @@ import "./index.css";
 import Box from "@material-ui/core/Box";
 import Fade from "@material-ui/core/Fade";
 import Paper from "@material-ui/core/Paper";
+import Container from "@material-ui/core/Container";
 
 const data = [
     "商品1",
@@ -123,55 +124,57 @@ class Slide extends React.Component {
 
         return (
             <div className="slide">
-                <Box className="principal">
+                <Container maxWidth={"xl"}>
+                    <Box className="principal">
 
-                    <Box className="carousel">
-                        {data.map((d, index) => (
-                            <Fade
-                                key={`${d}${index}`}
-                                // @ts-ignore
-                                className="content"
-                                in={index === currentSlide}
-                                timeout={{ enter: durationEnter, exit: durationExit }}
-                            >
-                                <Paper elevation={2} className="paper">
-                                    {d}
-                                </Paper>
-                            </Fade>
-                        ))}
-                    </Box>
-
-                    <Box className="dot">
-                        {indexArray.map((index) => {
-                            if (currentPage > totalPages || index >= data.length) {
-                                return null;
-                            }
-                            return (
-                                <span
-                                    key={`dot-${index}`}
-                                    onClick={() => this.handleClick(index)}
-                                    style={{
-                                        marginLeft: "5px",
-                                        cursor: "pointer",
-                                        fontSize:
-                                        // Right
-                                            (index === (dataPerPage - 1) * currentPage &&
-                                                currentPage < totalPages) ||
-                                            // Left
-                                            (index === (dataPerPage - 1) * (currentPage - 1) &&
-                                                index !== 0)
-                                                ? "15px"
-                                                : "20px",
-                                        color: currentSlide === index ? "salmon" : "pink",
-                                        textShadow: "0 3px 3px mistyrose"
-                                    }}
+                        <Box className="carousel">
+                            {data.map((d, index) => (
+                                <Fade
+                                    key={`${d}${index}`}
+                                    // @ts-ignore
+                                    className="content"
+                                    in={index === currentSlide}
+                                    timeout={{ enter: durationEnter, exit: durationExit }}
                                 >
+                                    <Paper elevation={2} className="paper">
+                                        {d}
+                                    </Paper>
+                                </Fade>
+                            ))}
+                        </Box>
+
+                        <Box className="dot">
+                            {indexArray.map((index) => {
+                                if (currentPage > totalPages || index >= data.length) {
+                                    return null;
+                                }
+                                return (
+                                    <span
+                                        key={`dot-${index}`}
+                                        onClick={() => this.handleClick(index)}
+                                        style={{
+                                            marginLeft: "5px",
+                                            cursor: "pointer",
+                                            fontSize:
+                                            // Right
+                                                (index === (dataPerPage - 1) * currentPage &&
+                                                    currentPage < totalPages) ||
+                                                // Left
+                                                (index === (dataPerPage - 1) * (currentPage - 1) &&
+                                                    index !== 0)
+                                                    ? "15px"
+                                                    : "20px",
+                                            color: currentSlide === index ? "salmon" : "pink",
+                                            textShadow: "0 3px 3px mistyrose"
+                                        }}
+                                    >
                   &#9679;
                 </span>
-                            );
-                        })}
+                                );
+                            })}
+                        </Box>
                     </Box>
-                </Box>
+                </Container>
             </div>
         );
     }

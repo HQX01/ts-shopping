@@ -4,18 +4,21 @@ import Menu from './Menu';
 import Detail from './Detail';
 import Slide from './Slide';
 import './index.css';
-import { Container } from '@material-ui/core';
+import Container from '@material-ui/core/Container';
 
 function HomePage() {
 
     return (
         <div className="home">
-            <Search />
-            <Container style={{display:'flex', marginLeft:60, padding:0}}>
-                <Menu />
-                <Slide />
-            </Container>
-            <Detail />
+<Container maxWidth={"xl"}>
+    <Search />
+    <Container style={{display:'flex', marginLeft:60, padding:0}}>
+        <Menu />
+        <Slide />
+    </Container>
+    <Detail />
+</Container>
+
         </div>
     );
 }
