@@ -14,11 +14,11 @@ import Sports from '@material-ui/icons/Sports';
 import SportsBasketball from '@material-ui/icons/SportsBasketball';
 import SportsGolf from '@material-ui/icons/SportsGolf';
 import Container from "@material-ui/core/Container";
+import './index.css'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            width: '50%',
             backgroundColor: theme.palette.background.paper,
         },
         nested: {
@@ -36,58 +36,61 @@ export default function NestedList() {
     };
 
     return (
-        <Container maxWidth={"xl"}>
-            <List
-                component="nav"
-                aria-labelledby="nested-list-subheader"
-                subheader={
-                    <ListSubheader component="div" id="nested-list-subheader">
-                        购物小帮手
-                    </ListSubheader>
-                }
-                className={classes.root}
-                style={{marginBottom:40, display:"block"}}
-            >
-                <ListItem button>
-                    <ListItemIcon>
-                        <Computer />
-                    </ListItemIcon>
-                    <ListItemText primary="电脑" />
-                </ListItem>
-                <ListItem button>
-                    <ListItemIcon>
-                        <PhoneAndroid />
-                    </ListItemIcon>
-                    <ListItemText primary="手机" />
-                </ListItem>
-                <ListItem button onClick={handleClick}>
-                    <ListItemIcon>
-                        <Sports />
-                    </ListItemIcon>
-                    <ListItemText primary="运动" />
-                    {open ? <ExpandLess /> : <ExpandMore />}
-                </ListItem>
-                <Collapse in={open} timeout="auto" unmountOnExit>
-                    <List component="div" disablePadding>
-                        <ListItem button className={classes.nested}>
-                            <ListItemIcon>
-                                <SportsBasketball />
-                            </ListItemIcon>
-                            <ListItemText primary="篮球用品" />
-                        </ListItem>
-                    </List>
-                </Collapse>
-                <Collapse in={open} timeout="auto" unmountOnExit>
-                    <List component="div" disablePadding>
-                        <ListItem button className={classes.nested}>
-                            <ListItemIcon>
-                                <SportsGolf />
-                            </ListItemIcon>
-                            <ListItemText primary="高尔夫球用品" />
-                        </ListItem>
-                    </List>
-                </Collapse>
-            </List>
-        </Container>
+        <div className="menu">
+            <Container maxWidth={"xl"}>
+                <List
+                    component="nav"
+                    aria-labelledby="nested-list-subheader"
+                    subheader={
+                        <ListSubheader component="div" id="nested-list-subheader">
+                            购物小帮手
+                        </ListSubheader>
+                    }
+                    className={classes.root}
+                    style={{marginBottom:40, display:"block"}}
+                >
+                    <ListItem button>
+                        <ListItemIcon>
+                            <Computer />
+                        </ListItemIcon>
+                        <ListItemText primary="电脑" />
+                    </ListItem>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <PhoneAndroid />
+                        </ListItemIcon>
+                        <ListItemText primary="手机" />
+                    </ListItem>
+                    <ListItem button onClick={handleClick}>
+                        <ListItemIcon>
+                            <Sports />
+                        </ListItemIcon>
+                        <ListItemText primary="运动" />
+                        {open ? <ExpandLess /> : <ExpandMore />}
+                    </ListItem>
+                    <Collapse in={open} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
+                            <ListItem button className={classes.nested}>
+                                <ListItemIcon>
+                                    <SportsBasketball />
+                                </ListItemIcon>
+                                <ListItemText primary="篮球用品" />
+                            </ListItem>
+                        </List>
+                    </Collapse>
+                    <Collapse in={open} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
+                            <ListItem button className={classes.nested}>
+                                <ListItemIcon>
+                                    <SportsGolf />
+                                </ListItemIcon>
+                                <ListItemText primary="高尔夫球用品" />
+                            </ListItem>
+                        </List>
+                    </Collapse>
+                </List>
+            </Container>
+        </div>
+
     );
 }

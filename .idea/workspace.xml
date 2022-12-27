@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7bcea6f-a323-4b1f-90c7-5a9552153c37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/component/homePage/Menu/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/homePage/Slide/Slider/ConfigSlider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/homePage/Slide/Slider/ConfigStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/Detail/goods/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/homePage/Detail/goods/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/Detail/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/homePage/Detail/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/Menu/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/homePage/Menu/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/Slide/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/homePage/Slide/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/Slide/index.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/homePage/Slide/index.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/Slide/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/homePage/Slide/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/homePage/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/homePage/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,36 +34,101 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/qianxihe/template/ts-shopping&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/qianxihe/template/ts-shopping/node_modules/typescript/lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/qianxihe/template/ts-shopping",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs.jest.jest_package": "/Users/qianxihe/template/ts-shopping/node_modules/react-scripts",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/qianxihe/template/ts-shopping/node_modules/typescript/lib"
   }
-}</component>
-  <component name="RunManager">
-    <configuration name="should render accountPage at the screen.should render remove at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/component/homePage/Slide/Slider" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Jest.should render ConfigSlider at the screen.should render check button">
+    <configuration name="should render ConfigSlider at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/component/homePage/Slide/Slider/ConfigSlider.test.tsx" />
+      <test-names>
+        <test-name value="should render ConfigSlider at the screen" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="should render ConfigSlider at the screen.should render check button" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/component/homePage/Detail/goods/index.test.tsx" />
+      <test-file value="$PROJECT_DIR$/src/component/homePage/Slide/Slider/ConfigSlider.test.tsx" />
       <test-names>
-        <test-name value="should render accountPage at the screen" />
-        <test-name value="should render remove at the screen" />
+        <test-name value="should render ConfigSlider at the screen" />
+        <test-name value="should render check button" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="should render ConfigSlider at the screen.should render description at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/component/homePage/Slide/Slider/ConfigSlider.test.tsx" />
+      <test-names>
+        <test-name value="should render ConfigSlider at the screen" />
+        <test-name value="should render description at the screen" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="should render ConfigSlider at the screen.should render image" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/component/homePage/Slide/Slider/ConfigSlider.test.tsx" />
+      <test-names>
+        <test-name value="should render ConfigSlider at the screen" />
+        <test-name value="should render image" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="should render ConfigSlider at the screen.should render slide" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/component/homePage/Slide/Slider/ConfigSlider.test.tsx" />
+      <test-names>
+        <test-name value="should render ConfigSlider at the screen" />
+        <test-name value="should render slide" />
       </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.should render accountPage at the screen.should render remove at the screen" />
+        <item itemvalue="Jest.should render ConfigSlider at the screen.should render check button" />
+        <item itemvalue="Jest.should render ConfigSlider at the screen.should render description at the screen" />
+        <item itemvalue="Jest.should render ConfigSlider at the screen.should render image" />
+        <item itemvalue="Jest.should render ConfigSlider at the screen.should render slide" />
+        <item itemvalue="Jest.should render ConfigSlider at the screen" />
       </list>
     </recent_temporary>
   </component>
@@ -65,7 +141,7 @@
       <option name="presentableId" value="Default" />
       <updated>1671968069880</updated>
       <workItem from="1671968071244" duration="7167000" />
-      <workItem from="1672041478487" duration="2751000" />
+      <workItem from="1672041478487" duration="10858000" />
     </task>
     <servers />
   </component>

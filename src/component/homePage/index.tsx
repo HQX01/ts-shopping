@@ -8,11 +8,12 @@ import Container from '@material-ui/core/Container';
 
 function HomePage() {
 
+
     return (
         <div className="home">
 <Container maxWidth={"xl"}>
     <Search />
-    <Container style={{display:'flex', marginLeft:60, padding:0}}>
+    <Container style={{display:'flex'}} className="nav">
         <Menu />
         <Slide />
     </Container>

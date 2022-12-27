@@ -23,15 +23,15 @@ function FormRow() {
 export default function Detail() {
     return (
         <Container maxWidth={"xl"}>
-            <Box sx={{ flexGrow: 1 }} style={{marginLeft:60}}>
+            <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={1}>
-                    <Grid container item spacing={3}>
+                    <Grid container item spacing={2}>
                         <FormRow />
                     </Grid>
-                    <Grid container item spacing={3}>
+                    <Grid container item spacing={2}>
                         <FormRow />
                     </Grid>
-                    <Grid container item spacing={3}>
+                    <Grid container item spacing={2}>
                         <FormRow />
                     </Grid>
                 </Grid>

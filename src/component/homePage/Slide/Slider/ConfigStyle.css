@@ -1,0 +1,25 @@
+.ProjectCarousel {
+  width: 70%;
+}
+.ProjectCarousel .Project {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  padding: 20px;
+}
+.ProjectCarousel .Project *
+    {
+      color: white;
+    }
+
+.ProjectCarousel .Project .CheckButton
+    {
+      margin-top: 40px;
+      color: white;
+
+      font-size: 25px;
+      border: 3px solid white;
+      text-transform: capitalize;
+
+      transition: 200ms;
+    }
