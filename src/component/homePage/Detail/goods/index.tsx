@@ -47,23 +47,20 @@ export default function Goods() {
                             <Grid item xs container direction="column" spacing={2}>
                                 <Grid item xs>
                                     <Typography gutterBottom variant="subtitle1">
-                                        Standard license
-                                    </Typography>
-                                    <Typography variant="body2" gutterBottom>
-                                        Full resolution 1920x1080 • JPEG
+                                        name
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary">
-                                        ID: 1030114
+                                        ID
                                     </Typography>
                                 </Grid>
                                 <Grid item>
+                                    <Typography variant="subtitle1">price</Typography>
+                                </Grid>
+                                <Grid item>
                                     <Typography variant="body2" style={{ cursor: 'pointer' }}>
-                                        Remove
+                                        description
                                     </Typography>
                                 </Grid>
-                            </Grid>
-                            <Grid item>
-                                <Typography variant="subtitle1">$19.00</Typography>
                             </Grid>
                         </Grid>
                     </Grid>
