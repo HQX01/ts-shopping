@@ -1,13 +1,18 @@
 {
   "products": [
     {
+      "img": "https://",
       "name": "牙刷",
       "price": 20.00,
       "description": "很好用",
-      "id": "Pd123456"
+      "id": "PD123456"
     },
     {
-
+      "img": "https://",
+      "name": "牙刷",
+      "price": 20.00,
+      "description": "很好用",
+      "id": "PD123456"
     }
   ]
 }
