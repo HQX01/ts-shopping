@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
-import Complex from '../../../../images/商品.jpeg'
 import Container from "@material-ui/core/Container";
+
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -26,7 +26,15 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-export default function Goods() {
+// @ts-ignore
+export default function Goods({products}) {
+
+    // @ts-ignore
+    const [ product, setProduct ] = useState(products);
+    useEffect(() => {
+        setProduct(products);
+    },[products]);
+
     const classes = useStyles();
 
     return (
@@ -36,25 +44,27 @@ export default function Goods() {
                     <Grid container spacing={2}>
                         <Grid item>
                             <ButtonBase className={classes.image}>
-                                <img className={classes.img} alt="complex" src={ Complex } />
+                                <img className={classes.img} alt="goods" src={ product.img } />
                             </ButtonBase>
                         </Grid>
                         <Grid item xs={12} sm container>
                             <Grid item xs container direction="column" spacing={2}>
                                 <Grid item xs>
                                     <Typography gutterBottom variant="subtitle1">
-                                        name
+                                        {product.name}
                                     </Typography>
+                                </Grid>
+                                <Grid item xs>
                                     <Typography variant="body2" color="textSecondary">
-                                        ID
+                                        {product.id}
                                     </Typography>
                                 </Grid>
-                                <Grid item>
-                                    <Typography variant="subtitle1">price</Typography>
+                                <Grid item xs>
+                                    <Typography variant="subtitle1">¥{product.price}</Typography>
                                 </Grid>
-                                <Grid item>
+                                <Grid item xs>
                                     <Typography variant="body2" style={{ cursor: 'pointer' }}>
-                                        description
+                                        {product.description}
                                     </Typography>
                                 </Grid>
                             </Grid>

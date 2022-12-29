@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e7bcea6f-a323-4b1f-90c7-5a9552153c37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mockData/product.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/mockData/product.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/Detail/goods/index.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/homePage/Detail/goods/index.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/Detail/goods/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/homePage/Detail/goods/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/Detail/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/homePage/Detail/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mockData/product.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,100 +27,100 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/qianxihe/template/ts-shopping",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs.jest.jest_package": "/Users/qianxihe/template/ts-shopping/node_modules/react-scripts",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/Users/qianxihe/template/ts-shopping/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/qianxihe/template/ts-shopping&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/qianxihe/template/ts-shopping/node_modules/react-scripts&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/qianxihe/template/ts-shopping/node_modules/typescript/lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/component/homePage/Slide/Slider" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.should render Slide at the screen">
-    <configuration name="should render ConfigSlider at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.should render detail at the screen">
+    <configuration name="should render detail at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/component/homePage/Slide/Slider/ConfigSlider.test.tsx" />
+      <test-file value="$PROJECT_DIR$/src/component/homePage/Detail/index.test.tsx" />
       <test-names>
-        <test-name value="should render ConfigSlider at the screen" />
+        <test-name value="should render detail at the screen" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="should render ConfigSlider at the screen.should render description at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="should render goods at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/component/homePage/Detail/goods/index.test.tsx" />
+      <test-names>
+        <test-name value="should render goods at the screen" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="should render goods at the screen.should render description at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/component/homePage/Slide/Slider/ConfigSlider.test.tsx" />
+      <test-file value="$PROJECT_DIR$/src/component/homePage/Detail/goods/index.test.tsx" />
       <test-names>
-        <test-name value="should render ConfigSlider at the screen" />
+        <test-name value="should render goods at the screen" />
         <test-name value="should render description at the screen" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="should render Slide at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/component/homePage/Slide/index.test.tsx" />
-      <test-names>
-        <test-name value="should render Slide at the screen" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="should render Slide at the screen.should render items" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="should render goods at the screen.should render name at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/component/homePage/Slide/index.test.tsx" />
+      <test-file value="$PROJECT_DIR$/src/component/homePage/Detail/goods/index.test.tsx" />
       <test-names>
-        <test-name value="should render Slide at the screen" />
-        <test-name value="should render items" />
+        <test-name value="should render goods at the screen" />
+        <test-name value="should render name at the screen" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="should render Slide at the screen.should render slide" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="should render goods at the screen.should render price at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/component/homePage/Slide/index.test.tsx" />
+      <test-file value="$PROJECT_DIR$/src/component/homePage/Detail/goods/index.test.tsx" />
       <test-names>
-        <test-name value="should render Slide at the screen" />
-        <test-name value="should render slide" />
+        <test-name value="should render goods at the screen" />
+        <test-name value="should render price at the screen" />
       </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.should render Slide at the screen" />
-        <item itemvalue="Jest.should render Slide at the screen.should render items" />
-        <item itemvalue="Jest.should render Slide at the screen.should render slide" />
-        <item itemvalue="Jest.should render ConfigSlider at the screen" />
-        <item itemvalue="Jest.should render ConfigSlider at the screen.should render description at the screen" />
+        <item itemvalue="Jest.should render detail at the screen" />
+        <item itemvalue="Jest.should render goods at the screen" />
+        <item itemvalue="Jest.should render goods at the screen.should render price at the screen" />
+        <item itemvalue="Jest.should render goods at the screen.should render name at the screen" />
+        <item itemvalue="Jest.should render goods at the screen.should render description at the screen" />
       </list>
     </recent_temporary>
   </component>
@@ -130,7 +133,8 @@
       <option name="presentableId" value="Default" />
       <updated>1671968069880</updated>
       <workItem from="1671968071244" duration="7167000" />
-      <workItem from="1672041478487" duration="14811000" />
+      <workItem from="1672041478487" duration="27283000" />
+      <workItem from="1672229264934" duration="5377000" />
     </task>
     <servers />
   </component>
