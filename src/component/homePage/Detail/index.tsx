@@ -7,64 +7,64 @@ import {useEffect, useState} from "react";
 
 const products =[
     {
-        "img": "https://www.baidu.com",
+        "img": "yashua",
         "name": "牙刷",
         "price": 20.00,
         "description": "很好用",
         "id": "P123456"
     },
     {
-        "img": "https://www.baidu.com",
+        "img": "diannao",
         "name": "电脑",
         "price": 2000.00,
         "description": "aaaaaaa",
         "id": "P111111"
     },
     {
-        "img": "https://www.baidu.com",
+        "img": "xiyiji",
         "name": "洗衣机",
         "price": 1220.00,
         "description": "dddd",
         "id": "P122222"
     },
     {
-        "img": "https://www.baidu.com",
+        "img": "kaoxiang",
         "name": "烤箱",
         "price": 2290.00,
         "description": "kkkkk",
         "id": "P122323"
     },
     {
-        "img": "https://www.baidu.com",
+        "img": "guo",
         "name": "锅",
         "price": 20100.00,
         "description": "ddadafda",
         "id": "P111211"
     },
     {
-        "img": "https://www.baidu.com",
+        "img": "men",
         "name": "门",
         "price": 11220.00,
         "description": "ddddasdsafdsfdd",
         "id": "P122122"
     },
     {
-        "img": "https://www.baidu.com",
-        "name": "并向你",
+        "img": "bingxiang",
+        "name": "冰箱",
         "price": 22190.00,
         "description": "asdfg",
         "id": "P172323"
     },
     {
-        "img": "https://www.baidu.com",
+        "img": "wenduji",
         "name": "温度计",
         "price": 30.00,
         "description": "热得快",
         "id": "P101211"
     },
     {
-        "img": "https://www.baidu.com",
-        "name": "不知道",
+        "img": "shouji",
+        "name": "手机",
         "price": 999.00,
         "description": "打算发的",
         "id": "P128122"

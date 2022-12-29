@@ -44,7 +44,7 @@ export default function Goods({products}) {
                     <Grid container spacing={2}>
                         <Grid item>
                             <ButtonBase className={classes.image}>
-                                <img className={classes.img} alt="goods" src={ product.img } />
+                                <img className={classes.img} alt="goods" src={ require("../../../../images/" + product.img + ".jpeg" ) } />
                             </ButtonBase>
                         </Grid>
                         <Grid item xs={12} sm container>
