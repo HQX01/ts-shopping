@@ -6,7 +6,7 @@ describe('should render goods at the screen', () => {
 
      const mockData =
     {
-        "img": "https://www.baidu.com",
+        "img": "goods",
         "name": "牙刷",
         "price": 20.00,
         "description": "很好用",
