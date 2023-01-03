@@ -33,7 +33,7 @@ export default function Head() {
                                 <Grid item xs>
                                     <Paper className={classes.paper}>
                                         <BrowserRouter>
-                                            <NavLink className="link-to-home" to="/homePage">首页</NavLink>
+                                            <NavLink className="link-to-home" to="/">首页</NavLink>
                                         </BrowserRouter>
                                     </Paper>
                                 </Grid>

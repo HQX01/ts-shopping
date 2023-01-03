@@ -18,13 +18,13 @@ function App() {
             <BrowserRouter>
                     <Head />
                     <Switch>
-                        <Route path="/homePage" component={HomePage}/>
-                        <Route path="/accountPage" component={AccountPage}/>
-                        <Route path="/shoppingCartPage" component={ShoppingCartPage}/>
-                        <Route path="/orderPage" component={OrderPage}/>
-                        <Route path="/help" component={Help}/>
-                        <Route path="/product" component={ProductPage}/>
-                        <Redirect to="/homePage"/>
+                        <Route exact path="/" component={HomePage}/>
+                        <Route exact path="/accountPage" component={AccountPage}/>
+                        <Route exact path="/shoppingCartPage" component={ShoppingCartPage}/>
+                        <Route exact path="/orderPage" component={OrderPage}/>
+                        <Route exact path="/help" component={Help}/>
+                        <Route exact path="/product" component={ProductPage}/>
+                        <Redirect to="/"/>
                     </Switch>
             </BrowserRouter>
 
