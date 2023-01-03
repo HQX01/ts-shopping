@@ -6,6 +6,7 @@ import AccountPage from './component/accountPage';
 import ShoppingCartPage from './component/shoppingCartPage';
 import OrderPage from './component/orderPage';
 import Help from './component/Help';
+import ProductPage from "./component/productPage";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import './App.css';
 
@@ -22,6 +23,7 @@ function App() {
                         <Route path="/shoppingCartPage" component={ShoppingCartPage}/>
                         <Route path="/orderPage" component={OrderPage}/>
                         <Route path="/help" component={Help}/>
+                        <Route path="/product" component={ProductPage}/>
                         <Redirect to="/homePage"/>
                     </Switch>
             </BrowserRouter>
