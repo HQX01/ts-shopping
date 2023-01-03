@@ -14,7 +14,6 @@ import Sports from '@material-ui/icons/Sports';
 import SportsBasketball from '@material-ui/icons/SportsBasketball';
 import SportsGolf from '@material-ui/icons/SportsGolf';
 import Container from "@material-ui/core/Container";
-import './index.css'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -36,7 +35,7 @@ export default function NestedList() {
     };
 
     return (
-        <div className="menu">
+        <div style={{width:'30%', height:'100%'}}>
             <Container maxWidth={"xl"}>
                 <List
                     component="nav"

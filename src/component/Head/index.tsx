@@ -24,7 +24,7 @@ export default function Head() {
     const classes = useStyles();
 
     return (
-        <div className="head">
+        <div className="head" style={{width:'100%'}}>
             <Container maxWidth={"lg"}>
                 <div className={classes.root}>
                     <AppBar position="static" style={{marginBottom: 20}}>

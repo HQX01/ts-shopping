@@ -3,8 +3,6 @@ import Carousel from "react-material-ui-carousel";
 import Container from "@material-ui/core/Container";
 
 import ConfigSlider from "./Slider/ConfigSlider";
-import "./Slider/ConfigStyle.css";
-import "./index.css"
 
 const items = [
     {
@@ -16,7 +14,7 @@ const items = [
     {
         name: "Hash Code 2019",
         description:
-            "My Solution on the 2019 Hash Code.",
+            "My Solution on the 2019 Hash Code and revolution.",
         color: "#7D85B1",
         image: "https://source.unsplash.com/1600x900/?portrait"
     },
@@ -36,9 +34,9 @@ const items = [
 
 function Slide(props:any) {
     return (
-        <div style={{ marginTop: "5px", color: "#494949"}} className="slide">
+        <div style={{ marginTop: "5px", color: "#494949", width:'70%', height:'100%'}}>
             <Container maxWidth={"lg"}>
-                <Carousel className="ProjectCarousel" animation="slide">
+                <Carousel className="ProjectCarousel" animation="slide" sx={{width:'70%', color:'white'}}>
                     {items.map((item, index) => {
                         return <ConfigSlider item={item} key={index} />;
                     })}

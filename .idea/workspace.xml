@@ -3,7 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="e7bcea6f-a323-4b1f-90c7-5a9552153c37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Head/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Head/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/Menu/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/Menu/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/homePage/Menu/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/Search/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/Search/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/homePage/Search/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/Slide/Slider/ConfigSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/homePage/Slide/Slider/ConfigSlider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/Slide/Slider/ConfigStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/Slide/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/Slide/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/homePage/Slide/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/homePage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/homePage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bingxiang.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bingxiang.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/diannao.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/diannao.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/guo.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/guo.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/kaoxiang.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/kaoxiang.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/men.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/men.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/shouji.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/shouji.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/wenduji.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/wenduji.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/xiyiji.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/xiyiji.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/yashua.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/yashua.jpeg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +61,48 @@
       <recent name="$PROJECT_DIR$/src/component/homePage/Slide/Slider" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.should render productPage at the screen">
+  <component name="RunManager" selected="Jest.should render goods at the screen.should render descriptions at the screen">
+    <configuration name="should render goods at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/component/homePage/Detail/goods/index.test.tsx" />
+      <test-names>
+        <test-name value="should render goods at the screen" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="should render goods at the screen.should render descriptions at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/component/homePage/Detail/goods/index.test.tsx" />
+      <test-names>
+        <test-name value="should render goods at the screen" />
+        <test-name value="should render descriptions at the screen" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="should render goods at the screen.should render grid at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/component/homePage/Detail/goods/index.test.tsx" />
+      <test-names>
+        <test-name value="should render goods at the screen" />
+        <test-name value="should render grid at the screen" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="should render productPage at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -70,55 +130,13 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="should render productPage at the screen.should render one box at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/component/productPage/index.test.tsx" />
-      <test-names>
-        <test-name value="should render productPage at the screen" />
-        <test-name value="should render one box at the screen" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="should render productPage at the screen.should render product name at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/component/productPage/index.test.tsx" />
-      <test-names>
-        <test-name value="should render productPage at the screen" />
-        <test-name value="should render product name at the screen" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="should render productPage at the screen.should render three box at the screen" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/component/productPage/index.test.tsx" />
-      <test-names>
-        <test-name value="should render productPage at the screen" />
-        <test-name value="should render three box at the screen" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.should render goods at the screen.should render descriptions at the screen" />
+        <item itemvalue="Jest.should render goods at the screen.should render grid at the screen" />
+        <item itemvalue="Jest.should render goods at the screen" />
         <item itemvalue="Jest.should render productPage at the screen" />
         <item itemvalue="Jest.should render productPage at the screen.should render description at the screen" />
-        <item itemvalue="Jest.should render productPage at the screen.should render one box at the screen" />
-        <item itemvalue="Jest.should render productPage at the screen.should render three box at the screen" />
-        <item itemvalue="Jest.should render productPage at the screen.should render product name at the screen" />
       </list>
     </recent_temporary>
   </component>
@@ -133,7 +151,7 @@
       <workItem from="1671968071244" duration="7167000" />
       <workItem from="1672041478487" duration="27283000" />
       <workItem from="1672229264934" duration="11830000" />
-      <workItem from="1672306623741" duration="8684000" />
+      <workItem from="1672306623741" duration="16497000" />
     </task>
     <servers />
   </component>

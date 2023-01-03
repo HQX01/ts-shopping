@@ -3,17 +3,17 @@ import Search from './Search';
 import Menu from './Menu';
 import Detail from './Detail';
 import Slide from './Slide';
-import './index.css';
 import Container from '@material-ui/core/Container';
 
 function HomePage() {
 
 
     return (
-        <div className="home">
+        // @ts-ignore
+        <div style={{margin:'0 auto'}}>
 <Container maxWidth={"xl"}>
     <Search />
-    <Container style={{display:'flex'}} className="nav">
+    <Container style={{display:'flex', width:'100%'}}>
         <Menu />
         <Slide />
     </Container>

@@ -9,14 +9,18 @@ function Project(props:any) {
                 className="Project"
                 style={{
                     backgroundImage: `url("${props.item.image}")`,
-                    backgroundRepeat: "no-repeat"
+                    backgroundRepeat: "no-repeat",
+                    position:'relative',
+                    height:'100%',
+                    overflow:'hidden',
+                    padding:20
                 }}
                 elevation={10}
             >
                 <h2>{props.item.name}</h2>
                 <p>{props.item.description}</p>
 
-                <Button className="CheckButton">Check it out!</Button>
+                <Button className="CheckButton" style={{marginTop:40, color:'white', fontSize:25, border:3, borderStyle:'solid', borderColor:'white', textTransform:'capitalize', transition:'200ms'}}>Check it out!</Button>
             </Paper>
         </Container>
     );
