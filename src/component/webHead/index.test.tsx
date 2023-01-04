@@ -8,7 +8,7 @@ import OrderPage from "../orderPage/index";
 import { MemoryRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 
-describe('should render head at the screen', ()=>{
+describe('should render web head at the screen', ()=>{
 
     test('should render head at the top of the page', () => {
         render(<WebHead />);

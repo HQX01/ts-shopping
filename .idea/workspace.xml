@@ -4,9 +4,12 @@
     <list default="true" id="e7bcea6f-a323-4b1f-90c7-5a9552153c37" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/component/webHead/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Head/index.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/webHead/index.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Head/index.tsx" beforeDir="false" />
+=======
+>>>>>>> 2b57f40 (fix some problems)
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +137,11 @@
       <workItem from="1671968071244" duration="7167000" />
       <workItem from="1672041478487" duration="27283000" />
       <workItem from="1672229264934" duration="11830000" />
+<<<<<<< HEAD
       <workItem from="1672306623741" duration="22296000" />
+=======
+      <workItem from="1672306623741" duration="26060000" />
+>>>>>>> 2b57f40 (fix some problems)
     </task>
     <servers />
   </component>
