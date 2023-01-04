@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-export default function Head() {
+export default function WebHead() {
     const classes = useStyles();
 
     return (
