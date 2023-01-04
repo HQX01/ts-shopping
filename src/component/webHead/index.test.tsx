@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Head from './index';
+import WebHead from './index';
 import HomePage from "../homePage/index";
 import AccountPage from "../accountPage/index";
 import ShoppingCartPage from "../shoppingCartPage/index";
@@ -11,7 +11,7 @@ import userEvent from "@testing-library/user-event";
 describe('should render head at the screen', ()=>{
 
     test('should render head at the top of the page', () => {
-        render(<Head />);
+        render(<WebHead />);
         const homePage = screen.getByText("首页");
         const accountPage = screen.getByText("我的账号");
         const shoppingCartPage = screen.getByText("我的购物车");
@@ -25,7 +25,7 @@ describe('should render head at the screen', ()=>{
     test('should go to homePage when click the link', () => {
         render(
             <MemoryRouter>
-                <Head />
+                <WebHead />
                 <HomePage />
             </MemoryRouter>
         );
@@ -36,7 +36,7 @@ describe('should render head at the screen', ()=>{
     test('should go to AccountPage when click the link', () => {
         render(
             <MemoryRouter>
-                <Head />
+                <WebHead />
                 <AccountPage />
             </MemoryRouter>
         );
@@ -47,7 +47,7 @@ describe('should render head at the screen', ()=>{
     test('should go to ShoppingCartPage when click the link', () => {
         render(
             <MemoryRouter>
-                <Head />
+                <WebHead />
                 <ShoppingCartPage />
             </MemoryRouter>
         );
@@ -58,7 +58,7 @@ describe('should render head at the screen', ()=>{
     test('should go to OrderPage when click the link', () => {
         render(
             <MemoryRouter>
-                <Head />
+                <WebHead />
                 <OrderPage />
             </MemoryRouter>
         );
