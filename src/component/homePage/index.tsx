@@ -11,15 +11,14 @@ function HomePage() {
     return (
         // @ts-ignore
         <div style={{margin:'0 auto'}}>
-<Container maxWidth={"xl"}>
-    <Search />
-    <Container style={{display:'flex', width:'100%'}}>
-        <Menu />
-        <Slide />
-    </Container>
-    <Detail />
-</Container>
-
+            <Container maxWidth={"xl"}>
+                <Search />
+                <Container style={{display:'flex', width:'100%'}}>
+                    <Menu />
+                    <Slide />
+                </Container>
+                <Detail />
+            </Container>
         </div>
     );
 }

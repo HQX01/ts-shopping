@@ -1,9 +1,7 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Goods from './goods/index';
 import Container from "@material-ui/core/Container";
-import {useEffect, useState} from "react";
 
 const products =[
     {
@@ -72,46 +70,24 @@ const products =[
 ];
 
 
-// @ts-ignore
-function FormRow({productLists}) {
-    const [ productList, setProductList ] = useState(productLists);
-    useEffect(() => {
-        setProductList(productLists);
-    }, [productLists]);
-    return (
-        <React.Fragment>
-            <Grid item xl={4} xs={12}>
-                <Goods products={productList[0]} />
-            </Grid>
-            <Grid item xl={4} xs={12}>
-                <Goods products={productList[1]}/>
-            </Grid>
-            <Grid item xl={4} xs={12}>
-                <Goods products={productList[2]}/>
-            </Grid>
-        </React.Fragment>
-    );
-}
+export const ProductContext = React.createContext(products);
+
+
 
 export default function Detail() {
+
     return (
         <Container maxWidth={"xl"}>
-            <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={1}>
-                    <Grid container item spacing={2}>
-                        {/*// @ts-ignore*/}
-                        <FormRow productLists={products.slice(0,3)} />
-                    </Grid>
-                    <Grid container item spacing={2}>
-                        {/*// @ts-ignore*/}
-                        <FormRow productLists={products.slice(3,6)}/>
-                    </Grid>
-                    <Grid container item spacing={2}>
-                        {/*// @ts-ignore*/}
-                        <FormRow productLists={products.slice(6,9)}/>
-                    </Grid>
+                <Grid container item spacing={2} sm={12} lg={4} style={{display: 'flex'}}>
+                    {products.map((item, index) => {
+                    return (
+                        // @ts-ignore
+                        <ProductContext.Provider value={item} key={index}>
+                            <Goods />
+                        </ProductContext.Provider>
+                    )
+                })}
                 </Grid>
-            </Box>
         </Container>
     );
 }
