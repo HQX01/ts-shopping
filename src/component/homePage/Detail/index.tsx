@@ -78,12 +78,14 @@ export default function Detail() {
 
     return (
         <Container maxWidth={"xl"}>
-                <Grid container item spacing={2} sm={12} lg={4} style={{display: 'flex'}}>
+                <Grid container item spacing={2}>
                     {products.map((item, index) => {
                     return (
                         // @ts-ignore
                         <ProductContext.Provider value={item} key={index}>
-                            <Goods />
+                            <Grid xs={12} xl={4}>
+                                <Goods />
+                            </Grid>
                         </ProductContext.Provider>
                     )
                 })}
