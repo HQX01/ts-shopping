@@ -9,7 +9,6 @@ function HomePage() {
 
 
     return (
-        // @ts-ignore
         <div style={{margin:'0 auto'}}>
             <Container maxWidth={"xl"}>
                 <Search />
