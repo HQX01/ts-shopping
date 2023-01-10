@@ -5,8 +5,8 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Container from "@material-ui/core/Container";
-import {ProductContext} from "../index";
-
+import {NavLink} from "react-router-dom";
+import {ProductContext} from "../../../../App";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -30,9 +30,11 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function Goods() {
 
-    const product = useContext(ProductContext);
+    // @ts-ignore
+    const {id, img, name, price, description} = useContext(ProductContext);
     const classes = useStyles();
 
+    // @ts-ignore
     return (
         <div className={classes.root} >
             <Container maxWidth={"xl"}>
@@ -40,32 +42,29 @@ export default function Goods() {
                     <Grid container spacing={2}>
                         <Grid item>
                             <ButtonBase className={classes.image}>
-                                {/*@ts-ignore*/}
-                                <img className={classes.img} alt="goods" src={ require("../../../../images/" + product.img + ".jpeg" ) } />
+                                <NavLink to={`/product/${id}`}>
+                                    <img className={classes.img} alt="goods" src={ require("../../../../images/" + img + ".jpeg" ) } />
+                                </NavLink>
                             </ButtonBase>
                         </Grid>
                         <Grid item xs={12} sm container>
                             <Grid item xs container direction="column" spacing={2}>
                                 <Grid item xs>
                                     <Typography gutterBottom variant="subtitle1">
-                                        {/*@ts-ignore*/}
-                                        {product.name}
+                                        {name}
                                     </Typography>
                                 </Grid>
                                 <Grid item xs>
                                     <Typography variant="body2" color="textSecondary">
-                                        {/*@ts-ignore*/}
-                                        {product.id}
+                                        {id}
                                     </Typography>
                                 </Grid>
                                 <Grid item xs>
-                                    {/*@ts-ignore*/}
-                                    <Typography variant="subtitle1">¥{product.price}</Typography>
+                                    <Typography variant="subtitle1">¥{price}</Typography>
                                 </Grid>
                                 <Grid item xs>
                                     <Typography variant="body2" style={{ cursor: 'pointer' }}>
-                                        {/*@ts-ignore*/}
-                                        {product.description}
+                                        {description}
                                     </Typography>
                                 </Grid>
                             </Grid>

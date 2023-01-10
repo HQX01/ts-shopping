@@ -11,7 +11,14 @@ import ProductPage from "./component/productPage";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import './App.css';
 import {useMediaQuery, useTheme} from "@mui/material";
+import axios from "axios";
 
+let products: any[] = [];
+axios.get('https://04980f0b-abbd-4c65-aaca-526f6216c954.mock.pstmn.io/product').then((response) => {
+    products = response.data;
+})
+
+export const ProductContext = React.createContext(products);
 
 
 function App() {
@@ -25,13 +32,15 @@ function App() {
                 <BrowserRouter>
                     <WebHead />
                     <Switch>
-                        <Route exact path="/" component={HomePage}/>
-                        <Route exact path="/accountPage" component={AccountPage}/>
-                        <Route exact path="/shoppingCartPage" component={ShoppingCartPage}/>
-                        <Route exact path="/orderPage" component={OrderPage}/>
-                        <Route exact path="/help" component={Help}/>
-                        <Route exact path="/product" component={ProductPage}/>
-                        <Redirect to="/"/>
+                        <ProductContext.Provider value={products}>
+                            <Route exact path="/" component={HomePage}/>
+                            <Route exact path="/accountPage" component={AccountPage}/>
+                            <Route exact path="/shoppingCartPage" component={ShoppingCartPage}/>
+                            <Route exact path="/orderPage" component={OrderPage}/>
+                            <Route exact path="/help" component={Help}/>
+                            <Route exact path="/product/:id" component={ProductPage}/>
+                            <Redirect to="/"/>
+                        </ProductContext.Provider>
                     </Switch>
                 </BrowserRouter>
 
@@ -46,13 +55,15 @@ function App() {
                 <BrowserRouter>
                     <MobileHead />
                     <Switch>
-                        <Route exact path="/" component={HomePage}/>
-                        <Route exact path="/accountPage" component={AccountPage}/>
-                        <Route exact path="/shoppingCartPage" component={ShoppingCartPage}/>
-                        <Route exact path="/orderPage" component={OrderPage}/>
-                        <Route exact path="/help" component={Help}/>
-                        <Route exact path="/product" component={ProductPage}/>
-                        <Redirect to="/"/>
+                        <ProductContext.Provider value={products}>
+                            <Route exact path="/" component={HomePage}/>
+                            <Route exact path="/accountPage" component={AccountPage}/>
+                            <Route exact path="/shoppingCartPage" component={ShoppingCartPage}/>
+                            <Route exact path="/orderPage" component={OrderPage}/>
+                            <Route exact path="/help" component={Help}/>
+                            <Route exact path="/product/:id" component={ProductPage}/>
+                            <Redirect to="/"/>
+                        </ProductContext.Provider>
                     </Switch>
                 </BrowserRouter>
 

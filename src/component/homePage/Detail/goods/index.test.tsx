@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Goods from './index';
-import {ProductContext} from "../index";
+import {ProductContext} from "../../../../App";
 
 describe('should render goods at the screen', () => {
 
