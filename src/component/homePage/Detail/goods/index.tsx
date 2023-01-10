@@ -1,11 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext} from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Container from "@material-ui/core/Container";
-
+import {NavLink} from "react-router-dom";
+import {ProductContext} from "../../../../App";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -26,45 +27,44 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-// @ts-ignore
-export default function Goods({products}) {
+
+export default function Goods() {
 
     // @ts-ignore
-    const [ product, setProduct ] = useState(products);
-    useEffect(() => {
-        setProduct(products);
-    },[products]);
-
+    const {id, img, name, price, description} = useContext(ProductContext);
     const classes = useStyles();
 
+    // @ts-ignore
     return (
-        <div className={classes.root}>
+        <div className={classes.root} >
             <Container maxWidth={"xl"}>
                 <Paper className={classes.paper}>
                     <Grid container spacing={2}>
                         <Grid item>
                             <ButtonBase className={classes.image}>
-                                <img className={classes.img} alt="goods" src={ require("../../../../images/" + product.img + ".jpeg" ) } />
+                                <NavLink to={`/product/${id}`}>
+                                    <img className={classes.img} alt="goods" src={ require("../../../../images/" + img + ".jpeg" ) } />
+                                </NavLink>
                             </ButtonBase>
                         </Grid>
                         <Grid item xs={12} sm container>
                             <Grid item xs container direction="column" spacing={2}>
                                 <Grid item xs>
                                     <Typography gutterBottom variant="subtitle1">
-                                        {product.name}
+                                        {name}
                                     </Typography>
                                 </Grid>
                                 <Grid item xs>
                                     <Typography variant="body2" color="textSecondary">
-                                        {product.id}
+                                        {id}
                                     </Typography>
                                 </Grid>
                                 <Grid item xs>
-                                    <Typography variant="subtitle1">¥{product.price}</Typography>
+                                    <Typography variant="subtitle1">¥{price}</Typography>
                                 </Grid>
                                 <Grid item xs>
                                     <Typography variant="body2" style={{ cursor: 'pointer' }}>
-                                        {product.description}
+                                        {description}
                                     </Typography>
                                 </Grid>
                             </Grid>
