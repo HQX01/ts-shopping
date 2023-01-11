@@ -11,14 +11,8 @@ import ProductPage from "./component/productPage";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import './App.css';
 import {useMediaQuery, useTheme} from "@mui/material";
-import axios from "axios";
+import {ProductContext, products} from "./context/context";
 
-let products: any[] = [];
-axios.get('https://04980f0b-abbd-4c65-aaca-526f6216c954.mock.pstmn.io/product').then((response) => {
-    products = response.data;
-})
-
-export const ProductContext = React.createContext(products);
 
 
 function App() {

@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Container from "@material-ui/core/Container";
 import {NavLink} from "react-router-dom";
-import {ProductContext} from "../../../../App";
+import {ProductContext} from "../../../../context/context";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({

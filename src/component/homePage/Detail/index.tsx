@@ -3,10 +3,10 @@ import Grid from '@mui/material/Grid';
 import Goods from './goods/index';
 import Container from "@material-ui/core/Container";
 import {useContext} from "react";
-import {ProductContext} from "../../../App";
+import {ProductContext} from "../../../context/context";
 
 export default function Detail() {
-    const products = useContext(ProductContext)
+    const products = useContext(ProductContext);
 
     return (
             <Container maxWidth={"xl"}>

@@ -7,7 +7,7 @@ import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import {useParams} from "react-router-dom";
 import {useContext} from "react";
-import {ProductContext} from "../../App";
+import {ProductContext} from "../../context/context";
 
 export default function ProductPage(this: any) {
     const products = useContext(ProductContext);

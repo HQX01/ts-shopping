@@ -11,6 +11,7 @@ function HomePage() {
     return (
         <div style={{margin:'0 auto'}}>
             <Container maxWidth={"xl"}>
+                {/*@ts-ignore*/}
                 <Search />
                 <Container style={{display:'flex', width:'100%'}}>
                     <Menu />
