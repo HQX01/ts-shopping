@@ -1,13 +1,14 @@
 import * as React from 'react';
 import Container from "@material-ui/core/Container";
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import {useParams} from "react-router-dom";
-import {useContext} from "react";
+import {useContext, useState} from "react";
 import {ProductContext} from "../../context/context";
+import {BrowserRouter, NavLink} from "react-router-dom";
+
 
 export default function ProductPage(this: any) {
     const products = useContext(ProductContext);
@@ -16,6 +17,23 @@ export default function ProductPage(this: any) {
         return item.id === Object.values(param)[0];
     })
 
+    const [count, setCount] = useState(0)
+    const handleClick = (type:string) => {
+        switch (type){
+            case '+':
+                setCount(count + 1)
+                break;
+            case '-':
+                if(count > 0) {
+                    setCount(count - 1)
+                }
+                break;
+            default:
+                return
+        }
+    }
+
+    const orderList = {product, count}
 
     return (
         <Container maxWidth={"lg"}>
@@ -42,10 +60,25 @@ export default function ProductPage(this: any) {
                         {/*@ts-ignore*/}
                         {product[0].description}
                     </Typography>
+                    <Typography>
+                        {/*@ts-ignore*/}
+                        <button onClick={()=>handleClick('-')}>-</button>
+                        {count}
+                        {/*@ts-ignore*/}
+                        <button onClick={()=>handleClick('+')}>+</button>
+                    </Typography>
                 </Box>
                 <Divider variant="middle" />
                 <Box sx={{ mt: 3, ml: 1, mb: 1 }}>
-                    <Button>添加到购物车</Button>
+                    <Typography>
+                        <BrowserRouter>
+                            <NavLink to={{pathname: "/shoppingCartPage", state:{orderList}}}>
+                                <button onClick={() => {}}>
+                                    添加到购物车
+                                </button>
+                            </NavLink>
+                        </BrowserRouter>
+                    </Typography>
                 </Box>
             </Box>
         </Container>

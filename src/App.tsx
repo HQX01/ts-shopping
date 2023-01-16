@@ -8,7 +8,7 @@ import ShoppingCartPage from './component/shoppingCartPage';
 import OrderPage from './component/orderPage';
 import Help from './component/Help';
 import ProductPage from "./component/productPage";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import './App.css';
 import {useMediaQuery, useTheme} from "@mui/material";
 import {ProductContext, products} from "./context/context";
@@ -32,8 +32,7 @@ function App() {
                             <Route exact path="/shoppingCartPage" component={ShoppingCartPage}/>
                             <Route exact path="/orderPage" component={OrderPage}/>
                             <Route exact path="/help" component={Help}/>
-                            <Route exact path="/product/:id" component={ProductPage}/>
-                            <Redirect to="/"/>
+                            <Route exact path="/product/:id" component={ProductPage} />
                         </ProductContext.Provider>
                     </Switch>
                 </BrowserRouter>
@@ -56,7 +55,6 @@ function App() {
                             <Route exact path="/orderPage" component={OrderPage}/>
                             <Route exact path="/help" component={Help}/>
                             <Route exact path="/product/:id" component={ProductPage}/>
-                            <Redirect to="/"/>
                         </ProductContext.Provider>
                     </Switch>
                 </BrowserRouter>
