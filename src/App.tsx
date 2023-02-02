@@ -27,12 +27,12 @@ function App() {
                     <WebHead />
                     <Switch>
                         <ProductContext.Provider value={products}>
-                            <Route exact path="/" component={HomePage}/>
                             <Route exact path="/accountPage" component={AccountPage}/>
                             <Route exact path="/shoppingCartPage" component={ShoppingCartPage}/>
                             <Route exact path="/orderPage" component={OrderPage}/>
                             <Route exact path="/help" component={Help}/>
                             <Route exact path="/product/:id" component={ProductPage} />
+                            <Route exact path="/" component={HomePage}/>
                         </ProductContext.Provider>
                     </Switch>
                 </BrowserRouter>
@@ -49,12 +49,12 @@ function App() {
                     <MobileHead />
                     <Switch>
                         <ProductContext.Provider value={products}>
-                            <Route exact path="/" component={HomePage}/>
                             <Route exact path="/accountPage" component={AccountPage}/>
                             <Route exact path="/shoppingCartPage" component={ShoppingCartPage}/>
                             <Route exact path="/orderPage" component={OrderPage}/>
                             <Route exact path="/help" component={Help}/>
                             <Route exact path="/product/:id" component={ProductPage}/>
+                            <Route exact path="/" component={HomePage}/>
                         </ProductContext.Provider>
                     </Switch>
                 </BrowserRouter>

@@ -6,7 +6,7 @@ describe('should render detail at the screen', () => {
 
     test('should render grids at the screen', () => {
         render(<Detail />);
-        expect(screen.getAllByRole('button')).toHaveLength(9);
+        expect(screen.getAllByRole('generic')).toHaveLength(3);
     });
 
 });

@@ -36,12 +36,12 @@ export default function Goods() {
 
     // @ts-ignore
     return (
-        <div className={classes.root} >
+        <div className={classes.root}>
             <Container maxWidth={"xl"}>
                 <Paper className={classes.paper}>
                     <Grid container spacing={2}>
                         <Grid item>
-                            <ButtonBase className={classes.image}>
+                            <ButtonBase className={classes.image} data-testid={img}>
                                 <NavLink to={`/product/${id}`}>
                                     <img className={classes.img} alt="goods" src={ require("../../../../images/" + img + ".jpeg" ) } />
                                 </NavLink>
@@ -50,20 +50,20 @@ export default function Goods() {
                         <Grid item xs={12} sm container>
                             <Grid item xs container direction="column" spacing={2}>
                                 <Grid item xs>
-                                    <Typography gutterBottom variant="subtitle1">
+                                    <Typography gutterBottom variant="subtitle1" data-testid={name}>
                                         {name}
                                     </Typography>
                                 </Grid>
                                 <Grid item xs>
-                                    <Typography variant="body2" color="textSecondary">
+                                    <Typography variant="body2" color="textSecondary" data-testid={id}>
                                         {id}
                                     </Typography>
                                 </Grid>
                                 <Grid item xs>
-                                    <Typography variant="subtitle1">¥{price}</Typography>
+                                    <Typography variant="subtitle1" data-testid={price}>¥{price}</Typography>
                                 </Grid>
                                 <Grid item xs>
-                                    <Typography variant="body2" style={{ cursor: 'pointer' }}>
+                                    <Typography variant="body2" style={{ cursor: 'pointer' }} data-testid={description}>
                                         {description}
                                     </Typography>
                                 </Grid>

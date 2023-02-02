@@ -1,5 +1,4 @@
 import React from 'react';
-import {useLocation} from "react-router-dom";
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
@@ -26,12 +25,15 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
+
 function ShoppingCartPage() {
 
-    const { state } = useLocation();
+    let shoppingProduct:any[] = [] //把请求的数据保存到这个数组里
+    fetch('http://localhost:8080/shoppingcart').then(res => res.json()).then(data => shoppingProduct.concat(data)) //这个写的不对？
+    console.log(shoppingProduct)
 
     // @ts-ignore
-    const productPrice = state.orderList.product[0].price * state.orderList.count;
+    // const productPrice = shoppingProduct[0].product.price * shoppingProduct[0].count;
 
     const classes = useStyles();
 
@@ -43,7 +45,7 @@ function ShoppingCartPage() {
                         <Grid item>
                             <ButtonBase className={classes.image}>
                                 {/*@ts-ignore*/}
-                                <img className={classes.img} alt="goods" src={ require("../../images/" + state.orderList.product[0].img + ".jpeg" ) } />
+                                <img className={classes.img} alt="goods" src={ require("../../images/" + shoppingProduct[0].product.img + ".jpeg" ) } />
                             </ButtonBase>
                         </Grid>
                         <Grid item xs={12} sm container>
@@ -51,17 +53,17 @@ function ShoppingCartPage() {
                                 <Grid item xs>
                                     <Typography gutterBottom variant="subtitle1">
                                         {/*@ts-ignore*/}
-                                        {state.orderList.product[0].name}
+                                        {shoppingProduct[0].product.name}
                                     </Typography>
                                 </Grid>
                                 <Grid item xs>
                                     <Typography variant="body2" color="textSecondary">
                                         {/*@ts-ignore*/}
-                                        {state.orderList.count}
+                                        {shoppingProduct[0].count}
                                     </Typography>
                                 </Grid>
                                 <Grid item xs>
-                                    <Typography variant="subtitle1">¥{productPrice}</Typography>
+                                    <Typography variant="subtitle1">¥</Typography>
                                 </Grid>
                             </Grid>
                         </Grid>

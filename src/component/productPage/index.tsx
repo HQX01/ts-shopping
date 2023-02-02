@@ -35,6 +35,23 @@ export default function ProductPage(this: any) {
 
     const orderList = {product, count}
 
+    const addProductToCart = () => {
+        fetch('http://localhost:8080/shoppingcart', {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(orderList),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }
+
     return (
         <Container maxWidth={"lg"}>
             <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
@@ -73,7 +90,8 @@ export default function ProductPage(this: any) {
                     <Typography>
                         <BrowserRouter>
                             <NavLink to={{pathname: "/shoppingCartPage", state:{orderList}}}>
-                                <button onClick={() => {}}>
+                                {/*@ts-ignore*/}
+                                <button onClick={() => addProductToCart()}>
                                     添加到购物车
                                 </button>
                             </NavLink>
