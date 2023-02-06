@@ -40,6 +40,9 @@ function ShoppingCartPage() {
             setShoppingProduct(res);
         }
         fetchProduct()
+    },[])
+
+    useEffect(() => {
         let price = 0
         // @ts-ignore
         shoppingProduct.map((item) => price += item.productPrice)
