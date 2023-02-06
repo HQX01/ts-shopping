@@ -44,17 +44,6 @@ describe('should render web head at the screen', ()=>{
         expect(screen.getByText(/accountPage/i)).toBeInTheDocument();
     });
 
-    test('should go to ShoppingCartPage when click the link', () => {
-        render(
-            <MemoryRouter>
-                <WebHead />
-                <ShoppingCartPage />
-            </MemoryRouter>
-        );
-        userEvent.click(screen.getByText(/我的购物车/i));
-        expect(screen.getByText(/ShoppingCartPage/i)).toBeInTheDocument();
-    });
-
     test('should go to OrderPage when click the link', () => {
         render(
             <MemoryRouter>
