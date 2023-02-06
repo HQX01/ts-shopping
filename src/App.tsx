@@ -19,7 +19,6 @@ function App() {
 
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up('lg'));
-    console.log('a')
 
     if(matches) {
         return (
