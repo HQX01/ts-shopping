@@ -1,7 +1,5 @@
 node_modules
 coverage
-package-lock.json
-package.json
 tsconfig.json
 .idea
 jest.config.js
