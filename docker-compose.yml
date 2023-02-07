@@ -1,0 +1,18 @@
+# yaml 配置
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - json-server
+  json-server:
+    image: vimagick/json-server
+    command: -H 0.0.0.0 -p 8080 -w shoppingcart.json
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./json-server:/data
+    restart: always
+

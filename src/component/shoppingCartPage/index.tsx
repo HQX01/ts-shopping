@@ -104,7 +104,7 @@ function ShoppingCartPage() {
                                     )
                                 })
                             }
-                            <Grid>共计：¥{totalPrice}</Grid>
+                            <Grid style={{textAlign:"right"}}>共计：¥{totalPrice}</Grid>
                         </Paper>
 
                     </Container>
