@@ -8,7 +8,11 @@ import userEvent from "@testing-library/user-event";
 describe('should render foot at the screen', ()=>{
 
     test('should render foot at the bottom of the page', () => {
-        render(<Foot />);
+        render(
+            <MemoryRouter>
+                <Foot />
+            </MemoryRouter>
+        );
         const linkElement = screen.getByText("有问题请联系客服");
         expect(linkElement).toBeInTheDocument();
     });

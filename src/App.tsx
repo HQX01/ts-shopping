@@ -50,8 +50,8 @@ function App() {
                             <Route path="/product/:id" element={<ProductPage/>}></Route>
                         </Routes>
                     </ProductContext.Provider>
+                        <Foot />
                     </BrowserRouter>
-                    <Foot />
             </div>
         );
     }
@@ -72,8 +72,9 @@ function App() {
                             </Route>
                         </Routes>
                     </ProductContext.Provider>
-                </BrowserRouter>
                     <Foot />
+                </BrowserRouter>
+
             </div>
         )
     }

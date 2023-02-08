@@ -11,7 +11,10 @@ import userEvent from "@testing-library/user-event";
 describe('should render web head at the screen', ()=>{
 
     test('should render head at the top of the page', () => {
-        render(<WebHead />);
+        render(
+            <MemoryRouter>
+                <WebHead />
+            </MemoryRouter>);
         const homePage = screen.getByText("首页");
         const accountPage = screen.getByText("我的账号");
         const shoppingCartPage = screen.getByText("我的购物车");

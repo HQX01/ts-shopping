@@ -8,12 +8,18 @@ import userEvent from "@testing-library/user-event";
 describe('should render mobile head at the screen', ()=>{
 
     test('should render mobilehead at the top of the page', () => {
-        render(<MobileHead />);
+        render(
+            <MemoryRouter>
+                <MobileHead />
+            </MemoryRouter>
+        );
         expect(screen.getByText('商城')).toBeInTheDocument();
     });
 
     test('should show complete head after click', () => {
-       render(<MobileHead />);
+       render(<MemoryRouter>
+           <MobileHead />
+       </MemoryRouter>);
         userEvent.click(screen.getByText('商城'));
         expect(screen.getByText('首页')).toBeInTheDocument();
     });

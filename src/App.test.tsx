@@ -19,7 +19,9 @@ describe('should render app at the screen', () => {
   test('should render mobile head when small screen', () => {
     // @ts-ignore
     window.matchMedia = createMatchMedia('600px');
-    render(<App />);
+    render(
+        <App />
+    );
     const linkElement = screen.getByText(/商城/i);
     expect(linkElement).toBeInTheDocument();
   });
