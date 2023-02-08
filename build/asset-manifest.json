@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/github-actions-demo/static/css/main.b346520f.css",
+    "main.js": "/github-actions-demo/static/js/main.12630dcf.js",
+    "static/media/guo.jpeg": "/github-actions-demo/static/media/guo.cc148e484bc78269812d.jpeg",
+    "static/media/shouji.jpeg": "/github-actions-demo/static/media/shouji.3ff4cbf6a930e582aae6.jpeg",
+    "static/media/men.jpeg": "/github-actions-demo/static/media/men.7e9ef7681ae9fc86a4d4.jpeg",
+    "static/media/xiyiji.jpeg": "/github-actions-demo/static/media/xiyiji.cb32148260ea53f6a723.jpeg",
+    "static/media/yashua.jpeg": "/github-actions-demo/static/media/yashua.70115fc411ae00117c0a.jpeg",
+    "static/media/kaoxiang.jpeg": "/github-actions-demo/static/media/kaoxiang.b349641b48b2cb17c437.jpeg",
+    "static/media/diannao.jpeg": "/github-actions-demo/static/media/diannao.a28f349abbcd0833fd06.jpeg",
+    "static/media/goods.jpeg": "/github-actions-demo/static/media/goods.10eccd5203a2d00fda84.jpeg",
+    "static/media/bingxiang.jpeg": "/github-actions-demo/static/media/bingxiang.233bb858c6fd2f5ad2d9.jpeg",
+    "static/media/wenduji.jpeg": "/github-actions-demo/static/media/wenduji.dff3f3fbae0beb89588e.jpeg",
+    "index.html": "/github-actions-demo/index.html",
+    "main.b346520f.css.map": "/github-actions-demo/static/css/main.b346520f.css.map",
+    "main.12630dcf.js.map": "/github-actions-demo/static/js/main.12630dcf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b346520f.css",
+    "static/js/main.12630dcf.js"
+  ]
+}
