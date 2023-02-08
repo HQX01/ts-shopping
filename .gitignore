@@ -1,8 +1,6 @@
 node_modules
 coverage
-tsconfig.json
 .idea
-jest.config.js
 commitlint.config.js
 .husky
 json-server

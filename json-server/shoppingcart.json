@@ -73,30 +73,16 @@
     {
       "product": [
         {
-          "img": "diannao",
-          "name": "电脑",
-          "price": 2000,
-          "description": "aaaaaaa",
-          "id": "P111111"
-        }
-      ],
-      "count": 3,
-      "productPrice": 6000,
-      "id": 2
-    },
-    {
-      "product": [
-        {
-          "img": "guo",
-          "name": "锅",
-          "price": 20100,
-          "description": "ddadafda",
-          "id": "P111211"
+          "img": "yashua",
+          "name": "牙刷",
+          "price": 20,
+          "description": "很好用",
+          "id": "P123456"
         }
       ],
       "count": 2,
-      "productPrice": 40200,
-      "id": 3
+      "productPrice": 40,
+      "id": 2
     }
   ]
 }

@@ -24,7 +24,7 @@ export default function WebHead() {
     const classes = useStyles();
 
     return (
-        <div className="head" style={{width:'100%'}}>
+        <div className="head" style={{width:'100%', position:'relative'}}>
             <Container maxWidth={"lg"}>
                 <div className={classes.root}>
                     <AppBar position="static" style={{marginBottom: 20}}>

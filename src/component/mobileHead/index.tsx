@@ -86,7 +86,7 @@ export default function MobileHead() {
     );
 
     return (
-        <div>
+        <div style={{position: 'relative'}}>
             { (
                 <React.Fragment key={'top'}>
                     <Button onClick={toggleDrawer('top', true)}>{'商城'}</Button>
