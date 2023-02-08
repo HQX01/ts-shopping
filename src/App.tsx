@@ -8,15 +8,15 @@ import ShoppingCartPage from './component/shoppingCartPage';
 import OrderPage from './component/orderPage';
 import Help from './component/Help';
 import ProductPage from "./component/productPage";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import './App.css';
 import {useMediaQuery, useTheme} from "@mui/material";
 import {ProductContext} from "./context/context";
 
 
 
+
 function App() {
-    console.log('a')
 
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up('lg'));
@@ -33,24 +33,23 @@ function App() {
         fetchProduct()
     },[])
 
+
     if(matches) {
         return (
             <div className="App">
-                <BrowserRouter>
                     <WebHead />
-                    <Switch>
-                            <ProductContext.Provider value={product}>
-                                <Route exact path="/accountPage" component={AccountPage}/>
-                                <Route exact path="/shoppingCartPage" component={ShoppingCartPage}/>
-                                <Route exact path="/orderPage" component={OrderPage}/>
-                                <Route exact path="/help" component={Help}/>
-                                <Route exact path="/product/:id" component={ProductPage}/>
-                                <Route exact path="/" component={HomePage}/>
-                            </ProductContext.Provider>
-                    </Switch>
-                </BrowserRouter>
-
-                <Foot />
+                    <ProductContext.Provider value={product}>
+                        <Routes>
+                            <Route path="/" element={<HomePage />}>
+                                <Route path="/shoppingcartPage" element={<ShoppingCartPage />}></Route>
+                                <Route path="/help" element={<Help />}></Route>
+                                <Route path="/accountPage" element={<AccountPage />}></Route>
+                                <Route path="/orderPage" element={<OrderPage />}></Route>
+                                <Route path="/product/:id" element={<ProductPage/>}></Route>
+                            </Route>
+                        </Routes>
+                    </ProductContext.Provider>
+                    <Foot />
             </div>
         );
     }
@@ -58,21 +57,18 @@ function App() {
     else {
         return (
             <div className="App">
-                <BrowserRouter>
                     <MobileHead />
-                    <Switch>
-                            <ProductContext.Provider value={product}>
-                                <Route exact path="/accountPage" component={AccountPage}/>
-                                <Route exact path="/shoppingCartPage" component={ShoppingCartPage}/>
-                                <Route exact path="/orderPage" component={OrderPage}/>
-                                <Route exact path="/help" component={Help}/>
-                                <Route exact path="/product/:id" component={ProductPage}/>
-                                <Route exact path="/" component={HomePage}/>
-                            </ProductContext.Provider>
-                    </Switch>
-                </BrowserRouter>
-
-                <Foot />
+                    <ProductContext.Provider value={product}>
+                        <Routes>
+                            <Route path="/" element={<HomePage />}></Route>
+                            <Route path="shoppingcartPage" element={<ShoppingCartPage />}></Route>
+                            <Route path="/help" element={<Help />}></Route>
+                            <Route path="/accountPage" element={<AccountPage />}></Route>
+                            <Route path="/orderPage" element={<OrderPage />}></Route>
+                            <Route path="/product/:id" element={<ProductPage/>}></Route>
+                        </Routes>
+                    </ProductContext.Provider>
+                    <Foot />
             </div>
         )
     }

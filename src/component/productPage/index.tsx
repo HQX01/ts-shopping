@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import {useParams} from "react-router-dom";
 import {useContext, useState} from "react";
 import {ProductContext} from "../../context/context";
-import {BrowserRouter, NavLink} from "react-router-dom";
+import {BrowserRouter, Link} from "react-router-dom";
 
 
 export default function ProductPage(this: any) {
@@ -95,12 +95,13 @@ export default function ProductPage(this: any) {
                 <Box sx={{ mt: 3, ml: 1, mb: 1 }}>
                     <Typography>
                         <BrowserRouter>
-                            <NavLink to={{pathname: "/shoppingCartPage", state:{orderList}}}>
+                            {/*@ts-ignore*/}
+                            <Link to={{pathname: "/shoppingCartPage"}}>
                                 {/*@ts-ignore*/}
                                 <button onClick={() => addProductToCart()}>
                                     添加到购物车
                                 </button>
-                            </NavLink>
+                            </Link>
                         </BrowserRouter>
                     </Typography>
                 </Box>

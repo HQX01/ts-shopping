@@ -5,13 +5,14 @@ import Button from '@mui/material/Button';
 import Toolbar from "@material-ui/core/Toolbar";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
-import {BrowserRouter, NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
 
 type Anchor = 'top';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
+
         root: {
             flexGrow: 1,
         },
@@ -53,30 +54,22 @@ export default function MobileHead() {
                     <Grid container spacing={4}>
                         <Grid item xs>
                             <Paper className={classes.paper}>
-                                <BrowserRouter>
-                                    <NavLink className="link-to-home" to="/">首页</NavLink>
-                                </BrowserRouter>
+                                    <Link className="link-to-home" to="/">首页</Link>
                             </Paper>
                         </Grid>
                         <Grid item xs>
                             <Paper className={classes.paper}>
-                                <BrowserRouter>
-                                    <NavLink className="link-to-account" to="/accountPage">我的账号</NavLink>
-                                </BrowserRouter>
+                                    <Link className="link-to-account" to="/accountPage">我的账号</Link>
                             </Paper>
                         </Grid>
                         <Grid item xs>
                             <Paper className={classes.paper}>
-                                <BrowserRouter>
-                                    <NavLink className="link-to-shoppingcart" to="/shoppingcartPage">我的购物车</NavLink>
-                                </BrowserRouter>
+                                    <Link className="link-to-shoppingcart" to="/shoppingcartPage">我的购物车</Link>
                             </Paper>
                         </Grid>
                         <Grid item xs>
                             <Paper className={classes.paper}>
-                                <BrowserRouter>
-                                    <NavLink className="link-to-order" to="/orderPage">我的订单</NavLink>
-                                </BrowserRouter>
+                                    <Link className="link-to-order" to="/orderPage">我的订单</Link>
                             </Paper>
                         </Grid>
                     </Grid>
