@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import {useParams} from "react-router-dom";
 import {useContext, useState} from "react";
 import {ProductContext} from "../../context/context";
-import {BrowserRouter, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 export default function ProductPage(this: any) {
@@ -94,7 +94,6 @@ export default function ProductPage(this: any) {
                 <Divider variant="middle" />
                 <Box sx={{ mt: 3, ml: 1, mb: 1 }}>
                     <Typography>
-                        <BrowserRouter>
                             {/*@ts-ignore*/}
                             <Link to={{pathname: "/shoppingCartPage"}}>
                                 {/*@ts-ignore*/}
@@ -102,7 +101,6 @@ export default function ProductPage(this: any) {
                                     添加到购物车
                                 </button>
                             </Link>
-                        </BrowserRouter>
                     </Typography>
                 </Box>
             </Box>

@@ -82,7 +82,21 @@
       ],
       "count": 2,
       "productPrice": 40,
-      "id": 2
+      "id": 3
+    },
+    {
+      "product": [
+        {
+          "img": "diannao",
+          "name": "电脑",
+          "price": 2000,
+          "description": "aaaaaaa",
+          "id": "P111111"
+        }
+      ],
+      "count": 2,
+      "productPrice": 4000,
+      "id": 4
     }
   ]
 }

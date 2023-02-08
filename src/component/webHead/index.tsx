@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, BrowserRouter } from 'react-router-dom';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -32,22 +32,30 @@ export default function WebHead() {
                             <Grid container spacing={4}>
                                 <Grid item xs>
                                     <Paper className={classes.paper}>
+                                        <BrowserRouter>
                                             <Link className="link-to-home" to="/">首页</Link>
+                                        </BrowserRouter>
                                     </Paper>
                                 </Grid>
                                 <Grid item xs>
                                     <Paper className={classes.paper}>
+                                        <BrowserRouter>
                                             <Link className="link-to-account" to="/accountPage">我的账号</Link>
+                                        </BrowserRouter>
                                     </Paper>
                                 </Grid>
                                 <Grid item xs>
                                     <Paper className={classes.paper}>
+                                        <BrowserRouter>
                                             <Link className="link-to-shoppingcart" to="/shoppingcartPage">我的购物车</Link>
+                                        </BrowserRouter>
                                     </Paper>
                                 </Grid>
                                 <Grid item xs>
                                     <Paper className={classes.paper}>
+                                        <BrowserRouter>
                                             <Link className="link-to-order" to="/orderPage">我的订单</Link>
+                                        </BrowserRouter>
                                     </Paper>
                                 </Grid>
                             </Grid>
