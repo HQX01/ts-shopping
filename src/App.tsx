@@ -37,8 +37,8 @@ function App() {
     if(matches) {
         return (
             <div className="App">
-                <WebHead />
                     <BrowserRouter>
+                        <WebHead />
                         <ProductContext.Provider value={product}>
                         <Routes>
                             <Route path="/" element={<HomePage />}>
@@ -59,8 +59,8 @@ function App() {
     else {
         return (
             <div className="App">
-                <MobileHead />
                 <BrowserRouter>
+                    <MobileHead />
                     <ProductContext.Provider value={product}>
                         <Routes>
                             <Route path="/" element={<HomePage />}>
