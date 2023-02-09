@@ -63,13 +63,12 @@ function App() {
                     <MobileHead />
                     <ProductContext.Provider value={product}>
                         <Routes>
-                            <Route path="/" element={<HomePage />}>
+                            <Route path="/" element={<HomePage />}></Route>
                                 <Route path="shoppingcartPage" element={<ShoppingCartPage />}></Route>
                                 <Route path="help" element={<Help />}></Route>
                                 <Route path="accountPage" element={<AccountPage />}></Route>
                                 <Route path="orderPage" element={<OrderPage />}></Route>
                                 <Route path="product/:id" element={<ProductPage/>}></Route>
-                            </Route>
                         </Routes>
                     </ProductContext.Provider>
                     <Foot />
