@@ -4,9 +4,7 @@ import Container from "@material-ui/core/Container";
 
 export default function ButtonLink() {
     return (
-        <div style={{marginLeft:60, position: 'fixed',
-            bottom: 0,
-            width: '100%'}}>
+        <div style={{position: 'relative'}}>
             <Container maxWidth={"lg"}>
                     <NavLink to="/help">有问题请联系客服</NavLink>
             </Container>
