@@ -18,6 +18,8 @@ import {ProductContext} from "./context/context";
 
 function App() {
 
+    console.log('a')
+
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up('lg'));
 
