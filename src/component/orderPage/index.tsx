@@ -55,56 +55,50 @@ function OrderPage() {
             <div className={classes.root}>
                 <Container maxWidth={"xl"}>
                     <Paper className={classes.paper}>
-                        {/*@ts-ignore*/}
-                        {orderProduct.map((item, index) => {
-                            return (
-                                <div key={index}>
-                                    {/*@ts-ignore*/}
-                                    <Grid>订单号：{item.id}</Grid>
-                                    {/*@ts-ignore*/}
-                                    <Grid>{item.product.map((productItem, index) => {
-                                        return (
-                                            <Grid container spacing={2} key={index}>
-                                                <Grid item>
-                                                    <ButtonBase className={classes.image}>
-                                                        {/*@ts-ignore*/}
-                                                        <img className={classes.img} alt="goods" src={require("../../images/" + productItem.img + ".jpeg")}/>
-                                                    </ButtonBase>
-                                                </Grid>
-                                                <Grid item xs={12} sm container>
-                                                    <Grid item xs container direction="column" spacing={2}>
-                                                        <Grid item xs>
-                                                            <Typography gutterBottom variant="subtitle1">
-                                                                {/*@ts-ignore*/}
-                                                                {productItem.name}
-                                                            </Typography>
-                                                        </Grid>
-                                                        <Grid item xs>
-                                                            <Typography variant="body2" color="textSecondary">
-                                                                {/*@ts-ignore*/}
-                                                                {productItem.count}
-                                                            </Typography>
-                                                        </Grid>
-                                                        <Grid item xs>
+                        {
+                            orderProduct.map((item, index) => {
+                                return (
+                                    <div key={index}>
+                                        {/*@ts-ignore*/}
+                                        <Grid>订单号：{item.id}</Grid>
+                                        <Grid container spacing={2} key={index}>
+                                            <Grid item>
+                                                <ButtonBase className={classes.image}>
+                                                    {/*@ts-ignore*/}
+                                                    <img className={classes.img} alt="goods" src={require("../../images/" + item.orderList[0].product.img + ".jpeg")}/>
+                                                </ButtonBase>
+                                            </Grid>
+                                            <Grid item xs={12} sm container>
+                                                <Grid item xs container direction="column" spacing={2}>
+                                                    <Grid item xs>
+                                                        <Typography gutterBottom variant="subtitle1">
                                                             {/*@ts-ignore*/}
-                                                            <Typography variant="subtitle1">¥{productItem.productPrice}</Typography>
-                                                        </Grid>
+                                                            {item.orderList[0].product.name}
+                                                        </Typography>
+                                                    </Grid>
+                                                    <Grid item xs>
+                                                        <Typography variant="body2" color="textSecondary">
+                                                            {/*@ts-ignore*/}
+                                                            {item.orderList[0].count}
+                                                        </Typography>
+                                                    </Grid>
+                                                    <Grid item xs>
+                                                        {/*@ts-ignore*/}
+                                                        <Typography variant="subtitle1">¥{item.orderList[0].productPrice}</Typography>
+                                                    </Grid>
+                                                    <Grid item xs>
+                                                        {/*@ts-ignore*/}
+                                                        <button onClick={() => deleteOrder(item.id)}>删除订单</button>
                                                     </Grid>
                                                 </Grid>
                                             </Grid>
-
-                                        )
-                                    })}</Grid>
-                                    {/*@ts-ignore*/}
-                                    <Grid style={{textAlign:"right"}}>共计：¥{item.totalPrice}</Grid>
-                                    <Grid item xs>
+                                        </Grid>
                                         {/*@ts-ignore*/}
-                                        <button onClick={() => deleteOrder(item.id)}>删除订单</button>
-                                    </Grid>
-                                </div>
-
-                            )
-                        })}
+                                        <Grid style={{textAlign:"right"}}>共计：¥{item.totalPrice}</Grid>
+                                    </div>
+                                )
+                            })
+                        }
                     </Paper>
                 </Container>
             </div> : <div className={classes.root}>

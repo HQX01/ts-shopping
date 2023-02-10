@@ -33,8 +33,9 @@ export default function ProductPage(this: any) {
         }
     }
 
-    const productPrice = count * product[0].price
-    const orderList = {product, count, productPrice}
+    const productItem = product[0]
+    const productPrice = count * productItem.price
+    const orderList = {"product": productItem, "count": count, "productPrice": productPrice}
 
     async function postData(url = '', data = {}) {
         // Default options are marked with *
@@ -62,26 +63,26 @@ export default function ProductPage(this: any) {
         <Container maxWidth={"lg"}>
             <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
                 <Box sx={{ m: 2 }}>
-                    <img src={require("../../images/" + product[0].img + '.jpeg')} alt="图片"/>
+                    <img src={require("../../images/" + productItem.img + '.jpeg')} alt="图片"/>
                 </Box>
                 <Box sx={{ my: 3, mx: 2 }}>
                     <Grid container alignItems="center">
                         <Grid item xs>
                             <Typography gutterBottom variant="h4" component="div">
                                 {/*@ts-ignore*/}
-                                {product[0].name}
+                                {productItem.name}
                             </Typography>
                         </Grid>
                         <Grid item>
                             <Typography gutterBottom variant="h6" component="div">
                                 {/*@ts-ignore*/}
-                                ¥{product[0].price}
+                                ¥{productItem.price}
                             </Typography>
                         </Grid>
                     </Grid>
                     <Typography color="text.secondary" variant="body2">
                         {/*@ts-ignore*/}
-                        {product[0].description}
+                        {productItem.description}
                     </Typography>
                     <Typography>
                         {/*@ts-ignore*/}

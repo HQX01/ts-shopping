@@ -99,7 +99,7 @@ function ShoppingCartPage() {
                                             <Grid item>
                                                 <ButtonBase className={classes.image}>
                                                     {/*@ts-ignore*/}
-                                                    <img className={classes.img} alt="goods" src={require("../../images/" + item.product[0].img + ".jpeg")}/>
+                                                    <img className={classes.img} alt="goods" src={require("../../images/" + item.product.img + ".jpeg")}/>
                                                 </ButtonBase>
                                             </Grid>
                                             <Grid item xs={12} sm container>
@@ -107,7 +107,7 @@ function ShoppingCartPage() {
                                                     <Grid item xs>
                                                         <Typography gutterBottom variant="subtitle1">
                                                             {/*@ts-ignore*/}
-                                                            {item.product[0].name}
+                                                            {item.product.name}
                                                         </Typography>
                                                     </Grid>
                                                     <Grid item xs>

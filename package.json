@@ -36,7 +36,14 @@
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
-    "server": "json-server --watch json-server/shoppingcart.json -p 8080"
+    "server": "json-server --watch json-server/shoppingcart.json -p 8080",
+    "prepare": "husky install",
+    "commitlint": "commitlint --config commitlint.config.js -e -V"
+  },
+  "lint-staged": {
+    "./src/*.{js, jsx, ts, tsx}": [
+      "eslint --fix"
+    ]
   },
   "eslintConfig": {
     "extends": [

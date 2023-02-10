@@ -37,12 +37,11 @@ function App() {
     if(matches) {
         return (
             <div className="App">
-                    <BrowserRouter>
-                        <WebHead />
-                        <ProductContext.Provider value={product}>
+                <BrowserRouter>
+                    <WebHead />
+                    <ProductContext.Provider value={product}>
                         <Routes>
-                            <Route path="/" element={<HomePage />}>
-                            </Route>
+                            <Route path="/" element={<HomePage />}></Route>
                             <Route path="/shoppingcartPage" element={<ShoppingCartPage />}></Route>
                             <Route path="/help" element={<Help />}></Route>
                             <Route path="/accountPage" element={<AccountPage />}></Route>
@@ -50,8 +49,8 @@ function App() {
                             <Route path="/product/:id" element={<ProductPage/>}></Route>
                         </Routes>
                     </ProductContext.Provider>
-                        <Foot />
-                    </BrowserRouter>
+                    <Foot />
+                </BrowserRouter>
             </div>
         );
     }
@@ -73,7 +72,6 @@ function App() {
                     </ProductContext.Provider>
                     <Foot />
                 </BrowserRouter>
-
             </div>
         )
     }
