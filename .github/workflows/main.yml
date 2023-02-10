@@ -23,7 +23,6 @@ jobs:
         uses: KengoTODA/actions-setup-docker-compose@v1
         with:
           version: '2.14.2'
-        run: docker-compose up
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
