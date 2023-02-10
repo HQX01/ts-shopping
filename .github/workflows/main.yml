@@ -26,5 +26,5 @@ jobs:
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          deploy_key: ${{ secrets.AAAAB3NzaC1yc2EAAAADAQABAAABgQCykS2kYMIpVhGQd7zkbgjfWmrQ1Y2JO8p2mbd0yMcHN2Ae/EbPz5JdlWaI19nwpzpGs3SlGEVeQjAEJezpwNcITr5vWpzOCAeoovxR+ke1725hPxbOmvvtPZifXSRz43l9AdNm/qhD396rLtsJs1hxLGqlQfmMC6tkNuMX6fT/xL/qXli10SKj/3TY1nQoJvhZbS5HQDpJ0ey/Oy6x6coNGXAQl7KHxMJBYvoJHxro0GwYKsofvKetw+k/3WhtdH7fM/TPDyTx5IAK0LteWoiGUHCwnMV7VmYZtSTyzOrG1AxDLN6Io3bBE4vOneymxHvEf0FCAH67BCyL9h4zrIQzcGcy4HWubb/ZS2UbPNSVj5l+HpRLCabFoxWRKLpMWs9ZSTGG0zmhiWXG6Gxz937VMuLP/SfSK3QUkz6iRxKtpi0md/K//ZjqGpjC+NgBnMNBda/0Rld7hFcr9LrK8bGyOaMJdF4gsoCqKLHo7QoTwAdRHUX0FgW7BBTei4J4y+k= hqx666@bupt.edu.cn }}
           publish_dir: ./build
