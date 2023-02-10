@@ -18,6 +18,7 @@
     "@types/react-dom": "^18.0.9",
     "commitlint": "^17.4.2",
     "css-mediaquery": "^0.1.2",
+    "husky": "^8.0.3",
     "json-server": "^0.17.1",
     "lint-staged": "^13.1.1",
     "material-auto-rotating-carousel": "^3.0.2",
@@ -39,7 +40,6 @@
     "test:coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "server": "json-server --watch json-server/shoppingcart.json -p 8080",
-    "prepare": "husky install",
     "commitlint": "commitlint --config commitlint.config.js -e -V"
   },
   "lint-staged": {
