@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from "react-router-dom";
 import Container from "@material-ui/core/Container";
 
-export default function ButtonLink() {
+export default function Foot() {
     return (
         <div style={{position: 'relative'}}>
             <Container maxWidth={"lg"}>

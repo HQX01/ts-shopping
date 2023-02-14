@@ -4,7 +4,6 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
-import Container from "@material-ui/core/Container";
 import {NavLink} from "react-router-dom";
 import {ProductContext} from "../../../../context/context";
 
@@ -37,7 +36,6 @@ export default function Goods() {
     // @ts-ignore
     return (
         <div className={classes.root}>
-            <Container maxWidth={"xl"}>
                 <Paper className={classes.paper}>
                     <Grid container spacing={2}>
                         <Grid item>
@@ -71,7 +69,6 @@ export default function Goods() {
                         </Grid>
                     </Grid>
                 </Paper>
-            </Container>
         </div>
     );
 }

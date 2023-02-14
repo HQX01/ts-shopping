@@ -1,32 +1,19 @@
-name: Deployment
+name: Docker Image CI/CD
 on:
   push:
-    branches:
-      - main
+    branches: [ master ]
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
+  # 构建并上传 Docker镜像
+  build:
+    runs-on: ubuntu-latest # 依赖的环境
     steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Install Packages
-        run: npm install --force
-      - name: Build page
-        run: npm run build
-      - name: Use docker-compose
-        uses: KengoTODA/actions-setup-docker-compose@v1
-        with:
-          version: '2.14.2'
-      - name: Build docker-compose
-        run: docker-compose build
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+      - uses: actions/checkout@v2
+      - name: Build Image
+        run: |
+          docker-compose build -t yiyungent/simcaptcha -f examples/EasyAspNetCoreService/Dockerfile .
+      - name: Login to Registry
+        run: docker login --username=${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_PASSWORD }}
+      - name: Push Image
+        run: |
+          docker push yiyungent/simcaptcha
+          docker push yiyungent/simcaptcha-client

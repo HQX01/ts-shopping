@@ -36,7 +36,7 @@ export default function NestedList() {
 
     return (
         <div style={{width:'30%', height:'100%'}}>
-            <Container maxWidth={"xl"}>
+            <Container>
                 <List
                     component="nav"
                     aria-labelledby="nested-list-subheader"

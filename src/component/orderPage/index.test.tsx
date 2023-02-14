@@ -6,7 +6,7 @@ describe('should render orderPage at the screen', () => {
 
     test('should render OrderPage', () => {
         render(<OrderPage />);
-        const linkElement = screen.getByText(/orderpage/i);
+        const linkElement = screen.getByText(/暂无订单/i);
         expect(linkElement).toBeInTheDocument();
     });
 

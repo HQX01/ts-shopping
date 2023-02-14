@@ -39,7 +39,7 @@
       "img": "men",
       "name": "门",
       "price": 11220,
-      "description": "ddddasdsafdsfdd",
+      "description": "dddd",
       "id": "P122122"
     },
     {
@@ -69,54 +69,6 @@
       "id": 1,
       "product": {},
       "count": 0
-    },
-    {
-      "product": {
-        "img": "yashua",
-        "name": "牙刷",
-        "price": 20,
-        "description": "很好用",
-        "id": "P123456"
-      },
-      "count": 4,
-      "productPrice": 80,
-      "id": 2
-    },
-    {
-      "product": {
-        "img": "diannao",
-        "name": "电脑",
-        "price": 2000,
-        "description": "aaaaaaa",
-        "id": "P111111"
-      },
-      "count": 2,
-      "productPrice": 4000,
-      "id": 3
-    },
-    {
-      "product": {
-        "img": "xiyiji",
-        "name": "洗衣机",
-        "price": 1220,
-        "description": "dddd",
-        "id": "P122222"
-      },
-      "count": 1,
-      "productPrice": 1220,
-      "id": 4
-    },
-    {
-      "product": {
-        "img": "diannao",
-        "name": "电脑",
-        "price": 2000,
-        "description": "aaaaaaa",
-        "id": "P111111"
-      },
-      "count": 2,
-      "productPrice": 4000,
-      "id": 5
     }
   ],
   "orders": [
@@ -126,6 +78,42 @@
         {}
       ],
       "totalPrice": 0
+    },
+    {
+      "orderList": [
+        {
+          "product": {
+            "img": "yashua",
+            "name": "牙刷",
+            "price": 20,
+            "description": "很好用",
+            "id": "P123456"
+          },
+          "count": 2,
+          "productPrice": 40,
+          "id": 2
+        }
+      ],
+      "totalPrice": 40,
+      "id": 2
+    },
+    {
+      "orderList": [
+        {
+          "product": {
+            "img": "diannao",
+            "name": "电脑",
+            "price": 2000,
+            "description": "aaaaaaa",
+            "id": "P111111"
+          },
+          "count": 3,
+          "productPrice": 6000,
+          "id": 2
+        }
+      ],
+      "totalPrice": 6000,
+      "id": 3
     }
   ]
 }

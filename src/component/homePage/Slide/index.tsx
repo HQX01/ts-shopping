@@ -35,7 +35,7 @@ const items = [
 function Slide(props:any) {
     return (
         <div style={{ marginTop: "5px", color: "#494949", width:'70%', height:'100%'}}>
-            <Container maxWidth={"lg"}>
+            <Container>
                 <Carousel className="ProjectCarousel" animation="slide" sx={{width:'70%', color:'white'}}>
                     {items.map((item, index) => {
                         return <ConfigSlider item={item} key={index} />;

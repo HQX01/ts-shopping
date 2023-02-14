@@ -15,7 +15,6 @@ import {ProductContext} from "./context/context";
 
 
 
-
 function App() {
 
     const theme = useTheme();
@@ -27,12 +26,10 @@ function App() {
         async function fetchProduct() {
             const response = await fetch('http://localhost:8080/products');
             const json = await response.json();
-            const res = json.filter((item: { id: number; }) => {return item.id !== 1})
-            setProduct(res);
+            setProduct(json);
         }
         fetchProduct()
     },[])
-
 
     if(matches) {
         return (

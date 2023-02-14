@@ -70,6 +70,5 @@
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "@types/react-router-dom": "^5.3.3"
-  },
-  "homepage": "https://HQX01.github.io"
+  }
 }

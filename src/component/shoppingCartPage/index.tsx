@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import ButtonBase from "@material-ui/core/ButtonBase";
@@ -68,7 +67,7 @@ function ShoppingCartPage() {
         return response.json(); // parses JSON response into native JavaScript objects
     }
 
-    const deleteProduct = async (id: any) => {
+    const deleteProduct = async (id: number) => {
         await fetch(`http://localhost:8080/shoppingcart/${id}`, {
             method: 'DELETE',
         }).then((res) => {
@@ -79,9 +78,18 @@ function ShoppingCartPage() {
     }
 
     const orderList = {"orderList": shoppingProduct, "totalPrice": totalPrice}
+    const count = shoppingProduct.length
 
     const addShoppingcartToOrder = async () => {
         postData('http://localhost:8080/orders', orderList)
+        for(let i = 2; i <= count + 1; i++)
+        {
+            await fetch(`http://localhost:8080/shoppingcart/${i}`, {
+                method: 'DELETE',
+            }).then((res) => {
+                return res.json()
+            })
+        }
         setShoppingProduct([])
     }
 
@@ -90,19 +98,18 @@ function ShoppingCartPage() {
     return (
         shoppingProduct.length !== 0 ?
                 <div className={classes.root}>
-                    <Container maxWidth={"xl"}>
                         <Paper className={classes.paper}>
                             {
                                 shoppingProduct.map((item, index) => {
                                     return (
-                                        <Grid container spacing={2} key={index}>
+                                        <Grid container key={index}>
                                             <Grid item>
                                                 <ButtonBase className={classes.image}>
                                                     {/*@ts-ignore*/}
                                                     <img className={classes.img} alt="goods" src={require("../../images/" + item.product.img + ".jpeg")}/>
                                                 </ButtonBase>
                                             </Grid>
-                                            <Grid item xs={12} sm container>
+                                            <Grid item sm container>
                                                 <Grid item xs container direction="column" spacing={2}>
                                                     <Grid item xs>
                                                         <Typography gutterBottom variant="subtitle1">
@@ -138,11 +145,8 @@ function ShoppingCartPage() {
                                 <Link to={`/orderPage`}>立即购买</Link>
                             </button>
                         </Grid>
-                    </Container>
                 </div> : <div className={classes.root}>
-                    <Container maxWidth={"xl"}>
                         暂无商品
-                    </Container>
                 </div>
     );
 }

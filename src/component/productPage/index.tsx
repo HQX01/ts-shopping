@@ -8,6 +8,7 @@ import {useParams} from "react-router-dom";
 import {useContext, useState} from "react";
 import {ProductContext} from "../../context/context";
 import {Link} from "react-router-dom";
+import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 
 
 export default function ProductPage(this: any) {
@@ -17,14 +18,14 @@ export default function ProductPage(this: any) {
         return item.id === Object.values(param)[0];
     })
 
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(1)
     const handleClick = (type:string) => {
         switch (type){
             case '+':
                 setCount(count + 1)
                 break;
             case '-':
-                if(count > 0) {
+                if(count > 1) {
                     setCount(count - 1)
                 }
                 break;
@@ -69,38 +70,29 @@ export default function ProductPage(this: any) {
                     <Grid container alignItems="center">
                         <Grid item xs>
                             <Typography gutterBottom variant="h4" component="div">
-                                {/*@ts-ignore*/}
                                 {productItem.name}
-                            </Typography>
-                        </Grid>
-                        <Grid item>
-                            <Typography gutterBottom variant="h6" component="div">
-                                {/*@ts-ignore*/}
-                                ¥{productItem.price}
                             </Typography>
                         </Grid>
                     </Grid>
                     <Typography color="text.secondary" variant="body2">
-                        {/*@ts-ignore*/}
                         {productItem.description}
                     </Typography>
-                    <Typography>
-                        {/*@ts-ignore*/}
-                        <button onClick={()=>handleClick('-')}>-</button>
-                        {count}
-                        {/*@ts-ignore*/}
-                        <button onClick={()=>handleClick('+')}>+</button>
+                    <Typography gutterBottom variant="h6" component="div">
+                        ¥{productItem.price}
+                    </Typography>
+                    <Typography style={{textAlign:"right"}}>
+                        <div>
+                            <button onClick={()=>handleClick('-')} style={{borderRadius: 3, marginRight: 2}}>-</button>
+                            {count}
+                            <button onClick={()=>handleClick('+')} style={{borderRadius: 3, marginLeft: 2}}>+</button>
+                        </div>
                     </Typography>
                 </Box>
                 <Divider variant="middle" />
                 <Box sx={{ mt: 3, ml: 1, mb: 1 }}>
                     <Typography>
-                            {/*@ts-ignore*/}
                             <Link to={{pathname: "/shoppingCartPage"}}>
-                                {/*@ts-ignore*/}
-                                <button onClick={() => addProductToCart()}>
-                                    添加到购物车
-                                </button>
+                                <AddShoppingCartIcon onClick={() => addProductToCart()}/>
                             </Link>
                     </Typography>
                 </Box>

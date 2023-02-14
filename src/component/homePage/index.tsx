@@ -1,25 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Search from './Search';
 import Menu from './Menu';
 import Detail from './Detail';
 import Slide from './Slide';
-import Container from '@material-ui/core/Container';
+import {products} from "../../context/context";
 
 function HomePage() {
 
+    const [search, setSearch] = useState('')
 
+    const handleSearch = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+        setSearch(event.target.value)
+    }
+
+    const filterProduct = products.filter(item => item.name === search)
 
     return (
         <div style={{margin:'0 auto'}}>
-            <Container maxWidth={"xl"}>
                 {/*@ts-ignore*/}
-                <Search onSearch/>
-                <Container style={{display:'flex', width:'100%'}}>
+                <Search search={search} onSearch={handleSearch}/>
+                <div style={{display:'flex', width: '100%'}}>
                     <Menu />
                     <Slide />
-                </Container>
-                <Detail />
-            </Container>
+                </div>
+                {/*@ts-ignore*/}
+                <Detail product={filterProduct}/>
         </div>
     );
 }

@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import ButtonBase from "@material-ui/core/ButtonBase";
@@ -50,61 +49,64 @@ function OrderPage() {
 
     const classes = useStyles();
 
+
     return (
         orderProduct.length !== 0 ?
             <div className={classes.root}>
-                <Container maxWidth={"xl"}>
                     <Paper className={classes.paper}>
-                        {
-                            orderProduct.map((item, index) => {
-                                return (
-                                    <div key={index}>
-                                        {/*@ts-ignore*/}
-                                        <Grid>订单号：{item.id}</Grid>
-                                        <Grid container spacing={2} key={index}>
-                                            <Grid item>
-                                                <ButtonBase className={classes.image}>
-                                                    {/*@ts-ignore*/}
-                                                    <img className={classes.img} alt="goods" src={require("../../images/" + item.orderList[0].product.img + ".jpeg")}/>
-                                                </ButtonBase>
+                            {
+                                // @ts-ignore
+                                orderProduct.map((item, index) => {
+                                    return (
+                                        <div key={index}>
+                                            {/*@ts-ignore*/}
+                                            <Grid>订单号：{item.id}</Grid>
+                                            <Grid container item spacing={2}>
+                                                {
+                                                    // @ts-ignore
+                                                    item.orderList.map((orderList, index) => {
+                                                        return (
+                                                            <Grid key={index} item container xs={12} md={4}>
+                                                                <Grid item>
+                                                                    <ButtonBase className={classes.image}>
+                                                                        <img className={classes.img} alt="goods" src={require("../../images/" + orderList.product.img + ".jpeg")}/>
+                                                                    </ButtonBase>
+                                                                </Grid>
+                                                                <Grid item sm container>
+                                                                    <Grid item xs container direction="column" spacing={2}>
+                                                                        <Grid item xs>
+                                                                            <Typography gutterBottom variant="subtitle1">
+                                                                                {orderList.product.name}
+                                                                            </Typography>
+                                                                        </Grid>
+                                                                        <Grid item xs>
+                                                                            <Typography variant="body2" color="textSecondary">
+                                                                                {orderList.count}
+                                                                            </Typography>
+                                                                        </Grid>
+                                                                        <Grid item xs>
+                                                                            <Typography variant="subtitle1">¥{orderList.productPrice}</Typography>
+                                                                        </Grid>
+                                                                    </Grid>
+                                                                </Grid>
+                                                            </Grid>
+                                                        )
+                                                    })
+                                                }
                                             </Grid>
-                                            <Grid item xs={12} sm container>
-                                                <Grid item xs container direction="column" spacing={2}>
-                                                    <Grid item xs>
-                                                        <Typography gutterBottom variant="subtitle1">
-                                                            {/*@ts-ignore*/}
-                                                            {item.orderList[0].product.name}
-                                                        </Typography>
-                                                    </Grid>
-                                                    <Grid item xs>
-                                                        <Typography variant="body2" color="textSecondary">
-                                                            {/*@ts-ignore*/}
-                                                            {item.orderList[0].count}
-                                                        </Typography>
-                                                    </Grid>
-                                                    <Grid item xs>
-                                                        {/*@ts-ignore*/}
-                                                        <Typography variant="subtitle1">¥{item.orderList[0].productPrice}</Typography>
-                                                    </Grid>
-                                                    <Grid item xs>
-                                                        {/*@ts-ignore*/}
-                                                        <button onClick={() => deleteOrder(item.id)}>删除订单</button>
-                                                    </Grid>
-                                                </Grid>
+                                            {/*@ts-ignore*/}
+                                            <Grid style={{textAlign:"right"}}>共计：¥{item.totalPrice}</Grid>
+                                            <Grid item xs>
+                                                {/*@ts-ignore*/}
+                                                <button onClick={() => deleteOrder(item.id)}>删除订单</button>
                                             </Grid>
-                                        </Grid>
-                                        {/*@ts-ignore*/}
-                                        <Grid style={{textAlign:"right"}}>共计：¥{item.totalPrice}</Grid>
-                                    </div>
-                                )
-                            })
-                        }
+                                        </div>
+                                    )
+                                })
+                            }
                     </Paper>
-                </Container>
             </div> : <div className={classes.root}>
-                <Container maxWidth={"xl"}>
                     暂无订单
-                </Container>
             </div>
     );
 }
