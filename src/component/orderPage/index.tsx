@@ -58,7 +58,7 @@ function OrderPage() {
                                 // @ts-ignore
                                 orderProduct.map((item, index) => {
                                     return (
-                                        <div key={index}>
+                                        <div key={index} style={{marginBottom: 10}}>
                                             {/*@ts-ignore*/}
                                             <Grid>订单号：{item.id}</Grid>
                                             <Grid container item spacing={2}>

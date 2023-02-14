@@ -102,7 +102,7 @@ function ShoppingCartPage() {
                             {
                                 shoppingProduct.map((item, index) => {
                                     return (
-                                        <Grid container key={index}>
+                                        <Grid container key={index} style={{marginBottom: 5}}>
                                             <Grid item>
                                                 <ButtonBase className={classes.image}>
                                                     {/*@ts-ignore*/}
