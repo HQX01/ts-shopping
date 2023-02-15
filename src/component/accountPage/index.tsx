@@ -4,7 +4,7 @@ import React from 'react';
 function AccountPage() {
     return (
         <div className="account">
-            accountPage
+            test github action
         </div>
     );
 }
