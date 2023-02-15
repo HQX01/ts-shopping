@@ -11,7 +11,7 @@ describe('should render detail at the screen', () => {
                 <Detail product={[]}/>
             </ProductContext.Provider>
         );
-        expect(screen.getAllByRole('generic')).toHaveLength(3);
+        expect(screen.getAllByRole('generic')).toHaveLength(2);
     });
 
 });

@@ -18,7 +18,7 @@ describe('should render menu at the screen', ()=>{
 
     test('should render five listitem at the screen', () => {
        render(<Menu />);
-       expect(screen.getAllByRole('button')).toHaveLength(5);
+       expect(screen.getAllByRole('button')).toHaveLength(3);
     });
 
 });

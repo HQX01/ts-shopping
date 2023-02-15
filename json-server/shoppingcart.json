@@ -83,42 +83,6 @@
       "orderList": [
         {
           "product": {
-            "img": "yashua",
-            "name": "牙刷",
-            "price": 20,
-            "description": "很好用",
-            "id": "P123456"
-          },
-          "count": 2,
-          "productPrice": 40,
-          "id": 2
-        }
-      ],
-      "totalPrice": 40,
-      "id": 2
-    },
-    {
-      "orderList": [
-        {
-          "product": {
-            "img": "diannao",
-            "name": "电脑",
-            "price": 2000,
-            "description": "aaaaaaa",
-            "id": "P111111"
-          },
-          "count": 3,
-          "productPrice": 6000,
-          "id": 2
-        }
-      ],
-      "totalPrice": 6000,
-      "id": 3
-    },
-    {
-      "orderList": [
-        {
-          "product": {
             "img": "diannao",
             "name": "电脑",
             "price": 2000,
@@ -203,25 +167,31 @@
             "description": "aaaaaaa",
             "id": "P111111"
           },
-          "count": 1,
-          "productPrice": 2000,
-          "id": 2
-        },
-        {
-          "product": {
-            "img": "yashua",
-            "name": "牙刷",
-            "price": 20,
-            "description": "很好用",
-            "id": "P123456"
-          },
-          "count": 1,
-          "productPrice": 20,
+          "count": 3,
+          "productPrice": 6000,
           "id": 3
         }
       ],
-      "totalPrice": 2020,
+      "totalPrice": 6000,
       "id": 5
+    },
+    {
+      "orderList": [
+        {
+          "product": {
+            "img": "diannao",
+            "name": "电脑",
+            "price": 2000,
+            "description": "aaaaaaa",
+            "id": "P111111"
+          },
+          "count": 1,
+          "productPrice": 2000,
+          "id": 2
+        }
+      ],
+      "totalPrice": 2000,
+      "id": 6
     }
   ]
 }
