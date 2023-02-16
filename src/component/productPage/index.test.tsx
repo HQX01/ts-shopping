@@ -16,6 +16,15 @@ describe('should render productPage at the screen', () => {
         expect(screen.getAllByRole('generic')).toHaveLength(1);
     });
 
-
+    test('should render product name at the screen', () => {
+        render(
+            <MemoryRouter>
+                <Routes>
+                    <Route path="/product/P123456" element={<ProductPage/>} />
+                </Routes>
+            </MemoryRouter>
+        );
+        expect(screen.getByText('yashua')).toBeInTheDocument()
+    })
 });
 

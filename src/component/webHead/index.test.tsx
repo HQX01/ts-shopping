@@ -3,7 +3,6 @@ import { render, screen } from '@testing-library/react';
 import WebHead from './index';
 import HomePage from "../homePage/index";
 import AccountPage from "../accountPage/index";
-import ShoppingCartPage from "../shoppingCartPage/index";
 import OrderPage from "../orderPage/index";
 import { MemoryRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";

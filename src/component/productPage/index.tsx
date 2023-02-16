@@ -68,7 +68,7 @@ export default function ProductPage(this: any) {
                 </Box>
                 <Box sx={{ my: 3, mx: 2 }}>
                     <Grid container alignItems="center">
-                        <Grid item xs>
+                        <Grid item xs data-testid="name">
                             <Typography gutterBottom variant="h4" component="div">
                                 {productItem.name}
                             </Typography>
