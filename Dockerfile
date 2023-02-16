@@ -1,5 +1,6 @@
 # pull official base image
 FROM node:16.15.1-alpine
+FROM --platform=linux/arm64/v8 base-image
 
 # set working directory
 WORKDIR /ts-shopping-web
