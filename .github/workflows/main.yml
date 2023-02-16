@@ -16,7 +16,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: username/repo-name:${{ steps.get-commit-hash.outputs.commit }}
+          tags: hqx666/ts-shopping:${{ steps.get-commit-hash.outputs.commit }}
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
