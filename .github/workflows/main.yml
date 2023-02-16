@@ -23,5 +23,4 @@ jobs:
           context: .
           push: true
           tags: |
-            docker.io/${{ secrets.DOCKER_USERNAME }}/my-image:latest
-            docker.io/${{ secrets.DOCKER_USERNAME }}/my-image:${{ github.sha }}
+            docker.io/${{ secrets.DOCKER_USERNAME }}/ts-shopping:${{ github.sha }}
