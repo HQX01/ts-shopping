@@ -2,7 +2,7 @@
 FROM node:16.15.1-alpine
 
 # set working directory
-WORKDIR /ts-shopping
+WORKDIR /ts-shopping-web
 
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /ts-shopping/node_modules/.bin:$PATH
