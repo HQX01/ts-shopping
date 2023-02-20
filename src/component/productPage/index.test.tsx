@@ -1,30 +1,80 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import ProductPage from "./index";
-import {MemoryRouter, Route, Routes} from "react-router-dom";
+import {ProductContext} from "../../context/context";
 
-describe('should render productPage at the screen', () => {
+describe('ProductPage', () => {
+    const products = [
+        {
+            id: '1',
+            name: 'Product 1',
+            description: 'Description of product 1',
+            price: 10,
+            img: 'yashua',
+        },
+        {
+            id: '2',
+            name: 'Product 2',
+            description: 'Description of product 2',
+            price: 20,
+            img: 'diannao',
+        },
+    ];
 
-    test('should render one box at the screen', () => {
+    it('renders product information correctly', () => {
         render(
-            <MemoryRouter>
+            <MemoryRouter initialEntries={[{ pathname: '/product/1' }]}>
                 <Routes>
-                    <Route path="/product/P123456" element={<ProductPage/>} />
+                    <Route path="/product/:id" element={<ProductPage />}>
+                    </Route>
+
                 </Routes>
-            </MemoryRouter>
+            </MemoryRouter>,
+            {
+                wrapper: ({ children }) => (
+                    <ProductContext.Provider value={products}>
+                        {children}
+                    </ProductContext.Provider>
+                ),
+            }
         );
-        expect(screen.getAllByRole('generic')).toHaveLength(1);
+
+        const name = screen.getByTestId('name');
+        expect(name).toHaveTextContent('Product 1');
+
+        const description = screen.getByText('Description of product 1');
+        expect(description).toBeInTheDocument();
+
+        const price = screen.getByText('¥10');
+        expect(price).toBeInTheDocument();
     });
 
-    test('should render product name at the screen', () => {
+    it('updates count correctly', () => {
         render(
-            <MemoryRouter>
+            <MemoryRouter initialEntries={[{ pathname: '/product/1' }]}>
                 <Routes>
-                    <Route path="/product/P123456" element={<ProductPage/>} />
+                    <Route path="/product/:id" element={<ProductPage />}>
+                    </Route>
                 </Routes>
-            </MemoryRouter>
+            </MemoryRouter>,
+            {
+                wrapper: ({ children }) => (
+                    <ProductContext.Provider value={products}>
+                        {children}
+                    </ProductContext.Provider>
+                ),
+            }
         );
-        expect(screen.getByText('yashua')).toBeInTheDocument()
-    })
-});
 
+        const decreaseButton = screen.getByText('-');
+        const count = screen.getByText('1');
+        const increaseButton = screen.getByText('+');
+
+        fireEvent.click(increaseButton);
+        expect(count).toHaveTextContent('2');
+
+        fireEvent.click(decreaseButton);
+        expect(count).toHaveTextContent('1');
+    });
+
+});

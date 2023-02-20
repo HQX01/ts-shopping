@@ -92,7 +92,13 @@
           "count": 3,
           "productPrice": 6000,
           "id": 2
-        },
+        }
+      ],
+      "totalPrice": 6000,
+      "id": 2
+    },
+    {
+      "orderList": [
         {
           "product": {
             "img": "kaoxiang",
@@ -101,45 +107,9 @@
             "description": "kkkkk",
             "id": "P122323"
           },
-          "count": 4,
-          "productPrice": 9160,
+          "count": 1,
+          "productPrice": 2290,
           "id": 3
-        },
-        {
-          "product": {
-            "img": "shouji",
-            "name": "手机",
-            "price": 999,
-            "description": "打算发的",
-            "id": "P128122"
-          },
-          "count": 4,
-          "productPrice": 3996,
-          "id": 4
-        },
-        {
-          "product": {
-            "img": "guo",
-            "name": "锅",
-            "price": 20100,
-            "description": "ddadafda",
-            "id": "P111211"
-          },
-          "count": 3,
-          "productPrice": 60300,
-          "id": 5
-        },
-        {
-          "product": {
-            "img": "bingxiang",
-            "name": "冰箱",
-            "price": 22190,
-            "description": "asdfg",
-            "id": "P172323"
-          },
-          "count": 3,
-          "productPrice": 66570,
-          "id": 6
         },
         {
           "product": {
@@ -149,49 +119,13 @@
             "description": "很好用",
             "id": "P123456"
           },
-          "count": 3,
-          "productPrice": 60,
-          "id": 7
-        }
-      ],
-      "totalPrice": 146086,
-      "id": 4
-    },
-    {
-      "orderList": [
-        {
-          "product": {
-            "img": "diannao",
-            "name": "电脑",
-            "price": 2000,
-            "description": "aaaaaaa",
-            "id": "P111111"
-          },
-          "count": 3,
-          "productPrice": 6000,
-          "id": 3
-        }
-      ],
-      "totalPrice": 6000,
-      "id": 5
-    },
-    {
-      "orderList": [
-        {
-          "product": {
-            "img": "diannao",
-            "name": "电脑",
-            "price": 2000,
-            "description": "aaaaaaa",
-            "id": "P111111"
-          },
           "count": 1,
-          "productPrice": 2000,
-          "id": 2
+          "productPrice": 20,
+          "id": 4
         }
       ],
-      "totalPrice": 2000,
-      "id": 6
+      "totalPrice": 2310,
+      "id": 3
     }
   ]
 }

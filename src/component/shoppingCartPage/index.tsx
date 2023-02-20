@@ -29,25 +29,40 @@ const useStyles = makeStyles((theme: Theme) =>
 
 // @ts-ignore
 function ShoppingCartPage() {
-    const [shoppingProduct, setShoppingProduct] = useState([])
-    const [totalPrice, setTotalPrice] = useState(0)
+    const [shoppingProduct, setShoppingProduct] = useState([]);
+    const [totalPrice, setTotalPrice] = useState(0);
 
     useEffect(() => {
-        async function fetchProduct() {
+        fetchProduct();
+    }, []);
+
+    useEffect(() => {
+        const price = calculateTotalPrice(shoppingProduct);
+        setTotalPrice(price);
+    }, [shoppingProduct]);
+
+    const fetchProduct = async () => {
+        try {
             const response = await fetch('http://localhost:8080/shoppingcart');
             const json = await response.json();
-            const res = json.filter((item: { id: number; }) => {return item.id !== 1})
+            const res = json.filter((item: { id: number; }) => item.id !== 1);
             setShoppingProduct(res);
+        } catch (error) {
+            console.error(error);
         }
-        fetchProduct()
-    },[])
+    };
 
-    useEffect(() => {
-        let price = 0
-        // @ts-ignore
-        shoppingProduct.map((item) => price += item.productPrice)
-        setTotalPrice(price)
-    },[shoppingProduct])
+    const deleteProduct = async (id: number) => {
+        try {
+            await fetch(`http://localhost:8080/shoppingcart/${id}`, {
+                method: 'DELETE',
+            });
+            // @ts-ignore
+            setShoppingProduct(shoppingProduct.filter((item) => item.id !== id));
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     async function postData(url = '', data = {}) {
         // Default options are marked with *
@@ -67,31 +82,26 @@ function ShoppingCartPage() {
         return response.json(); // parses JSON response into native JavaScript objects
     }
 
-    const deleteProduct = async (id: number) => {
-        await fetch(`http://localhost:8080/shoppingcart/${id}`, {
-            method: 'DELETE',
-        }).then((res) => {
-            return res.json()
-        })
-        // @ts-ignore
-        setShoppingProduct(shoppingProduct.filter(m => m.id !== id))
-    }
-
-    const orderList = {"orderList": shoppingProduct, "totalPrice": totalPrice}
-    const count = shoppingProduct.length
-
     const addShoppingcartToOrder = async () => {
-        postData('http://localhost:8080/orders', orderList)
-        for(let i = 2; i <= count + 1; i++)
-        {
-            await fetch(`http://localhost:8080/shoppingcart/${i}`, {
-                method: 'DELETE',
-            }).then((res) => {
-                return res.json()
-            })
+        try {
+            await postData('http://localhost:8080/orders', {
+                orderList: shoppingProduct,
+                totalPrice: totalPrice,
+            });
+            for (let i = 2; i <= shoppingProduct.length + 1; i++) {
+                await fetch(`http://localhost:8080/shoppingcart/${i}`, {
+                    method: 'DELETE',
+                });
+            }
+            setShoppingProduct([]);
+        } catch (error) {
+            console.error(error);
         }
-        setShoppingProduct([])
-    }
+    };
+
+    const calculateTotalPrice = (products: any[]) => {
+        return products.reduce((sum, item) => sum + item.productPrice, 0);
+    };
 
     const classes = useStyles();
 

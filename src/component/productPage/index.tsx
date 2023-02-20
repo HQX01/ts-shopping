@@ -92,7 +92,7 @@ export default function ProductPage(this: any) {
                 <Box sx={{ mt: 3, ml: 1, mb: 1 }}>
                     <Typography>
                             <Link to={{pathname: "/shoppingCartPage"}}>
-                                <AddShoppingCartIcon onClick={() => addProductToCart()}/>
+                                <AddShoppingCartIcon onClick={() => addProductToCart()} data-testid="add-to-cart-button"/>
                             </Link>
                     </Typography>
                 </Box>
